@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ys.h2hdrx.adminmodule.Registration">
+      <class name="com.ys.h2hdrx.adminmodule.AdminLogin">
         <methods>
+          <include name="loginAdmin"/>
           <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="Registration_register"/>
         </methods>
-      </class> <!-- com.ys.h2hdrx.adminmodule.Registration -->
+      </class> <!-- com.ys.h2hdrx.adminmodule.AdminLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

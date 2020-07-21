@@ -102,7 +102,7 @@
                     <div class="method-list-content skipped suite-Default_suite">
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ys.h2hdrx.adminmodule.Registration" hash-for-method="Registration_register">Registration_register</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ys.h2hdrx.adminmodule.AdminLogin" hash-for-method="loginAdmin">loginAdmin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Default_suite -->
@@ -120,17 +120,17 @@
           <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.ys.h2hdrx.adminmodule.Registration</span>
+              <span class="class-name">com.ys.h2hdrx.adminmodule.AdminLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Registration_register">
-                  </a> <!-- Registration_register -->
-                  <span class="method-name">Registration_register</span>
+                  <a name="loginAdmin">
+                  </a> <!-- loginAdmin -->
+                  <span class="method-name">loginAdmin</span>
                   <div class="stack-trace">java.lang.NullPointerException
 	at com.ys.h2hdrx.webmodule.Driver.browser(Driver.java:50)
-	at com.ys.h2hdrx.adminmodule.Registration.beforeTest(Registration.java:143)
+	at com.ys.h2hdrx.adminmodule.AdminLogin.beforeTest(AdminLogin.java:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -164,7 +164,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/h2/w9w3j0wj7svby1k9x5qhv6n40000gn/T/testng-eclipse-1313906629/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/h2/w9w3j0wj7svby1k9x5qhv6n40000gn/T/testng-eclipse--1165678265/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -173,7 +173,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ys.h2hdrx.adminmodule.Registration&quot;/&gt;
+      &lt;class name=&quot;com.ys.h2hdrx.adminmodule.AdminLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -215,8 +215,8 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Registration_register')
-data.setCell(0, 2, 'com.ys.h2hdrx.adminmodule.Registration')
+data.setCell(0, 1, 'loginAdmin')
+data.setCell(0, 2, 'com.ys.h2hdrx.adminmodule.AdminLogin')
 data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
@@ -237,17 +237,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ys.h2hdrx.adminmodule.Registration</span>
+              <span class="ignored-class-name">com.ys.h2hdrx.adminmodule.AdminLogin</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tryPassScreenshot</span>
+                <span class="ignored-method-name">changePassword</span>
                 <br/>
-                <span class="ignored-method-name">Registration_edit</span>
-                <br/>
-                <span class="ignored-method-name">tryFailScreenshot</span>
+                <span class="ignored-method-name">editUser</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -259,9 +257,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ys.h2hdrx.adminmodule.Registration</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ys.h2hdrx.adminmodule.AdminLogin</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">Registration_register</span>
+                <span class="method-name">loginAdmin</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test before">

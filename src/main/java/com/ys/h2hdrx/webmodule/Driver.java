@@ -23,7 +23,7 @@ public class Driver {
 		if (module.equalsIgnoreCase("web")) {
 			try {
 				//Input Test Data/Url&Browser1.xlsx
-				fi = new FileInputStream("Users/admin/Documents/workspace/H2HDrxProductionNew/Input Test Data/Url_Browser1.xlsx");
+				fi = new FileInputStream("user.dir/Input Test Data/Url_Browser1.xlsx");
 				wb = new XSSFWorkbook(fi);
 				s = wb.getSheetAt(0);
 				url = s.getRow(4).getCell(0).getStringCellValue();
@@ -36,7 +36,7 @@ public class Driver {
 			// return driver;
 		} else if (module.equalsIgnoreCase("admin")) {
 			try {
-				fi = new FileInputStream("Users/admin/Documents/workspace/H2HDrxProductionNew/Input Test Data/Url_Browser1.xlsx");
+				fi = new FileInputStream("user.dir/Input Test Data/Url_Browser1.xlsx");
 				wb = new XSSFWorkbook(fi);
 				s = wb.getSheetAt(0);
 				url = s.getRow(2).getCell(0).getStringCellValue();

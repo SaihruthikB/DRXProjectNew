@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="3" total="4" passed="0">
+<testng-results skipped="1" failed="0" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1128" started-at="2020-07-21T10:39:24Z" finished-at="2020-07-21T10:39:26Z">
+  <suite name="Default suite" duration-ms="504" started-at="2020-07-21T11:33:05Z" finished-at="2020-07-21T11:33:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1128" started-at="2020-07-21T10:39:24Z" finished-at="2020-07-21T10:39:26Z">
-      <class name="com.ys.h2hdrx.adminmodule.Registration">
-        <test-method status="FAIL" signature="beforeTest()[pri:0, instance:com.ys.h2hdrx.adminmodule.Registration@589838eb]" name="beforeTest" is-config="true" duration-ms="592" started-at="2020-07-21T10:39:24Z" finished-at="2020-07-21T10:39:25Z">
+    <test name="Default test" duration-ms="504" started-at="2020-07-21T11:33:05Z" finished-at="2020-07-21T11:33:06Z">
+      <class name="com.ys.h2hdrx.adminmodule.AdminLogin">
+        <test-method status="FAIL" signature="beforeTest()[pri:0, instance:com.ys.h2hdrx.adminmodule.AdminLogin@271053e1]" name="beforeTest" is-config="true" duration-ms="62" started-at="2020-07-21T11:33:05Z" finished-at="2020-07-21T11:33:06Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 at com.ys.h2hdrx.webmodule.Driver.browser(Driver.java:50)
-at com.ys.h2hdrx.adminmodule.Registration.beforeTest(Registration.java:143)
+at com.ys.h2hdrx.adminmodule.AdminLogin.beforeTest(AdminLogin.java:46)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -43,12 +43,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="SKIP" signature="Registration_register()[pri:2, instance:com.ys.h2hdrx.adminmodule.Registration@589838eb]" name="Registration_register" duration-ms="0" started-at="2020-07-21T10:39:26Z" finished-at="2020-07-21T10:39:26Z">
+        <test-method status="SKIP" signature="loginAdmin()[pri:1, instance:com.ys.h2hdrx.adminmodule.AdminLogin@271053e1]" name="loginAdmin" duration-ms="0" started-at="2020-07-21T11:33:06Z" finished-at="2020-07-21T11:33:06Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 at com.ys.h2hdrx.webmodule.Driver.browser(Driver.java:50)
-at com.ys.h2hdrx.adminmodule.Registration.beforeTest(Registration.java:143)
+at com.ys.h2hdrx.adminmodule.AdminLogin.beforeTest(AdminLogin.java:46)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,12 +78,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Registration_register -->
-        <test-method status="SKIP" signature="afterTest()[pri:0, instance:com.ys.h2hdrx.adminmodule.Registration@589838eb]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-07-21T10:39:26Z" finished-at="2020-07-21T10:39:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.ys.h2hdrx.adminmodule.Registration -->
+        </test-method> <!-- loginAdmin -->
+      </class> <!-- com.ys.h2hdrx.adminmodule.AdminLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
