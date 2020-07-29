@@ -16,20 +16,20 @@ public class Medicationhistory_confirmcancellation {
 	Webmoduleobjects obj;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	@Test(priority=16) 
   	public void Confirmcanellation() throws Exception {
 		obj = PageFactory.initElements(driver, Webmoduleobjects.class);
 		//obj.medicationHistory_tab.click();
-		//obj.medicationHistory_tab.click();
+		obj.medicationHistory_tab.click();
 	  WebElement WebElement = obj.medicationhistory_table;
 	  List<WebElement> list1= WebElement.findElements(By.tagName("tr"));
 	  
@@ -145,31 +145,42 @@ public class Medicationhistory_confirmcancellation {
 	// System.out.println(obj.medicationHistoryStatus);
 	  if ((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet  *"))){
 		  obj.medication_checkboxes(i).click();
+		  obj.mh_confirmcancellation.click();
+		  obj.savedremove_but.click(); /// added for script stability
+		  
 	  }
 	  else if((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet"))){
 		  obj.medication_checkboxes(i).click();
+		  obj.mh_confirmcancellation.click();
+		  obj.savedremove_but.click(); /// added for script stability
 	  }
-		  if((obj.medication_druglists(i).trim().equals("Zestril 10 MG Oral Tablet"))) {
+		  /*if((obj.medication_druglists(i).trim().equals("Zestril 10 MG Oral Tablet"))) {
 			  obj.medication_checkboxes(i).click();
 			  obj.mh_confirmcancellation.click();
+			  
 			  
 			 // System.out.println(obj.confirmcancellation_num());
 			  break;
 			  
 			 
 	  }
-			 
+			*/  //need to check with nagamani
 			  
 					
 				
 				  
 	  }
-	  obj.cancel_checkbox.click();
-	  obj.savedremove_but.click();
-	  System.out.println(obj.cancelscreen());
+	 //obj.cancel_checkbox.click(); (nned to check with nagamani)
+	 // obj.savedremove_but.click(); (neeed to check with nagamani)
+	  
+	  
+	 /* System.out.println(obj.cancelscreen());
 	if(obj.cancelscreen().equalsIgnoreCase("Cancel Prescriptions :")){
-	obj.savedback_but.click();
-	}
+	obj.savedback_but.click(); 
+	
+	
+	}*/ //need to check with nagamani ---- Dono why this code is 
+	  
 	 /* WebElement WebElement1 = obj.cancel_table;
 	  List<WebElement> cancellist1= WebElement.findElements(By.tagName("td"));
 	  
@@ -186,7 +197,7 @@ public class Medicationhistory_confirmcancellation {
 	 }
   @BeforeTest
   public void beforeTest() throws Exception {
-/*	driver = Driver.browser("web");
+     /* driver = Driver.browser("web");
       UserLogin us = new UserLogin();
       // System.out.println("getDriver"+Driver.getDriver());
       us.driver = driver;

@@ -19,13 +19,13 @@ public class Rxpad   {
 	public WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	@Test(priority = 4)
@@ -88,72 +88,13 @@ public class Rxpad   {
 		obj.drugsearch_txt.click();
 		obj.drugsearch_detailslink.click();
 		tryPassScreenshot("WM_RX_19");
-		obj.back_LinkText.click();
+		//obj.back_LinkText.click();
 		tryPassScreenshot("WM_RX_20");
 		}catch (Exception e) {
 		 tryFailScreenshot("WM_RX_19");
 		 tryFailScreenshot("WM_RX_20");
 			}
-		try{
-			obj.drug_txt.clear();
-		obj.drug_txt.sendKeys("lipi");
-		obj.reset_LinkText.click();
-		tryPassScreenshot("WM_RX_56");
-		}catch (Exception e) {
-		tryFailScreenshot("WM_RX_56");
-	}
-		obj.drug_txt.clear();
-		obj.drug_txt.sendKeys("lipi");
-		Thread.sleep(3000);
-		// drug options
-		WebElement web = obj.drug_table;
-		Select options = new Select(web);
-
-		List<WebElement> list = options.getOptions();
-
-		System.out.println(list.size());
-		for (int i = 1; i <= list.size(); i++) {
-			obj.Drug_list(i);
-			System.out.println(obj.Drug_list(i));
-			if (obj.Drug_list(i).equalsIgnoreCase("Lipitor")) {
-			/* Actions a = new Actions(driver);
-			a.doubleClick(obj.Drugsearch(i)).build().perform();*/
-				obj.drugsearch_txt.click();
-				break;
-			}
-		}
-		// drug list
-		WebElement WebElement = obj.druglist_table;
-		List<WebElement> list1 = WebElement.findElements(By.tagName("tr"));
-
-		System.out.println(list1.size());
-		for (int i = 1; i <= list1.size(); i++) {
-			obj.Drugs_list(i);
-			System.out.println(obj.Drugs_list(i));
-			if (obj.Drugs_list(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")) {
-				obj.drugsearch_detailslink.click();
-				obj.close_lnk.click();
-				tryPassScreenshot("WM_RX_27");
-				obj.Drugs_lists(i).click();
-				tryPassScreenshot("WM_RX_21");
-				break;
-				
-				
-			}
-			else{
-				tryFailScreenshot("WM_RX_21");
-				tryFailScreenshot("WM_RX_27");
-			}
-
-		}
-		// System.out.println(obj.alternativepopup());
-		 /*if(obj.alternativepopup().contains("Alternatives:")){
-		  obj.next_link.click();
-		  obj.altclose_lnk.click();
-	  	}
-	  	else{
-		  obj.quantity_txt.clear();
-	  	}*/
+		
 		try{
 		obj.quantity_txt.clear();
 		obj.quantity_txt.sendKeys("5");
@@ -273,17 +214,17 @@ public class Rxpad   {
 
 	 @BeforeTest	
 	  public void beforeTest() throws Exception {
-		 
-		// driver = Driver.browser("web");
-		 /*UserLogin us = new UserLogin();
+	
+		driver = Driver.browser("web");
+		 UserLogin us = new UserLogin();
 		 System.out.println("rxpad");
 	      // System.out.println("getDriver"+Driver.getDriver());
 	      us.driver = driver;
 	      us.doctorLogin("MIDANAR001", "Pass@123");
 	      PatientSearch ps = new PatientSearch();
 	      ps.driver = driver;
-	      ps.patientSearch();*/
-	     
+	      ps.patientSearch();
+     
 	  }
 
 	  @AfterTest

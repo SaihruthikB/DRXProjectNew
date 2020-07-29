@@ -30,7 +30,7 @@ public class Patientprofile {
 	  /*driver=Driver.browser("web");
       UserLogin us = new UserLogin();
 	  us.driver = driver;
-      us.doctorLogin("MIDANAR001", "password");
+      us.doctorLogin("MIDANAR001", "Pass@123");
       PatientSearch ps = new PatientSearch();
       ps.driver=driver;
       ps.patientSearch();*/

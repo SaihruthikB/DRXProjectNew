@@ -8,18 +8,17 @@ import org.testng.annotations.Test;
 
 public class PatientSearch {
 	Webmoduleobjects obj;
-
-	 public WebDriver driver;
+ public WebDriver driver;
 
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
@@ -91,13 +90,13 @@ public class PatientSearch {
 		} catch (Exception e) {
 			tryFailScreenshot("WM_PS_23");
 		}
-		obj.patientsearch_lastname_txt.sendKeys("schnur");
-		obj.patientsearch_dob_txt.sendKeys("08/13/1956");
+		obj.patientsearch_lastname_txt.sendKeys("a"); //schnur
+		obj.patientsearch_dob_txt.sendKeys("08/25/2009"); //08/13/1956
 		obj.Search_LinkText.click();
 		tryPassScreenshot("WM_PS_09");
 		WebdriverWait.implicitwait(10);
 		try {
-			if (obj.patientDOBinTable().contains("08/13/1956")) {
+			if (obj.patientDOBinTable().contains("08/26/2009")) { //08/13/1956
 				tryPassScreenshot("WM_PS_15");
 			} else {
 				tryFailScreenshot("WM_PS_15");
@@ -134,11 +133,11 @@ public class PatientSearch {
 
 	@BeforeTest
 	public void beforeTest() throws Exception {
-		/*driver = Driver.browser("web");
-		UserLogin us = new UserLogin();
-		// System.out.println("getDriver"+Driver.getDriver());
-		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");*/
+//		driver = Driver.browser("web");
+//		UserLogin us = new UserLogin();
+//		 //System.out.println("getDriver"+Driver.getDriver());
+//		us.driver = driver;
+//		us.doctorLogin("MIDANAR001", "Pass@123");
 	}
 
 	@AfterTest

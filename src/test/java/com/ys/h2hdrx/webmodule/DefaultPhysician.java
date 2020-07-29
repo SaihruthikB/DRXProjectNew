@@ -24,7 +24,7 @@ public class DefaultPhysician {
   }
   @BeforeTest
   public void beforeTest() throws Exception {
-	 /* driver=Driver.browser("web");
+	  /*driver=Driver.browser("web");
       UserLogin us = new UserLogin();
 	  us.driver = driver;
       us.doctorLogin("midrhpn001", "Pass@123");

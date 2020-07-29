@@ -1,6 +1,5 @@
 package com.ys.h2hdrx.webmodule;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
@@ -36,13 +35,13 @@ public class UserLogin {
 
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
@@ -56,6 +55,7 @@ public class UserLogin {
 		//if(username.equals("CADW OR001")){
 		obj.password_txt.sendKeys(password);
 		obj.userlogin_btn.click();
+		Thread.sleep(4000);
 		if (obj.useridVal().contains("User Id is required")) {
 			tryPassScreenshot("WM_L_04");
 		} else {

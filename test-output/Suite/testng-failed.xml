@@ -1,48 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test">
+  <test thread-count="5" name="AllTestcase(failed)">
     <classes>
-      <class name="com.ys.h2hdrx.webmodule.UserLogin"/>
-      <class name="com.ys.h2hdrx.webmodule.PatientSearch"/>
-      <class name="com.ys.h2hdrx.webmodule.Rxpad"/>
-      <class name="com.ys.h2hdrx.webmodule.SSMedicationhistory"/>
-      <class name="com.ys.h2hdrx.webmodule.Allergies"/>
+      <class name="com.ys.h2hdrx.webmodule.Alltest">
+        <methods>
+          <include name="Freetext"/>
+          <include name="beforeSuite"/>
+          <include name="Medicationhistory"/>
+          <include name="Myprofile"/>
+          <include name="Myprofile_favouritedrug"/>
+          <include name="allergies"/>
+          <include name="Myprofile_setdruginteraction"/>
+          <include name="SendandPrint"/>
+          <include name="ssmedication"/>
+          <include name="Addtomedication"/>
+          <include name="Patientprofile"/>
+          <include name="Myprofile_staffauthorization"/>
+          <include name="Print"/>
+          <include name="Defaultphysician"/>
+          <include name="Rxpad"/>
+          <include name="PatientFavouriteDrug"/>
+          <include name="Rxpad_prescriptionreport"/>
+          <include name="afterSuite"/>
+          <include name="Medication_cancellation"/>
+          <include name="Doctorsaveprescrition"/>
+          <include name="Insurance"/>
+          <include name="PatientSavedPrescription"/>
+          <include name="Patientsearch"/>
+        </methods>
+      </class> <!-- com.ys.h2hdrx.webmodule.Alltest -->
     </classes>
-  </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="com.ys.h2hdrx.webmodule.PatientSearch">
-        <methods>
-          <include name="patientSearch"/>
-        </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.PatientSearch -->
-      <class name="com.ys.h2hdrx.webmodule.Allergies">
-        <methods>
-          <include name="allergies_inactive"/>
-          <include name="allergies_add"/>
-          <include name="allergies_addreaction"/>
-          <include name="allergies_edit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.Allergies -->
-      <class name="com.ys.h2hdrx.webmodule.SSMedicationhistory">
-        <methods>
-          <include name="pbm"/>
-          <include name="fills"/>
-        </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.SSMedicationhistory -->
-      <class name="com.ys.h2hdrx.webmodule.UserLogin">
-        <methods>
-          <include name="doctorLogin"/>
-        </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.UserLogin -->
-      <class name="com.ys.h2hdrx.webmodule.Rxpad">
-        <methods>
-          <include name="Confirmprescription"/>
-          <include name="sendtopharmacy"/>
-        </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.Rxpad -->
-    </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- AllTestcase(failed) -->
 </suite> <!-- Failed suite [Suite] -->

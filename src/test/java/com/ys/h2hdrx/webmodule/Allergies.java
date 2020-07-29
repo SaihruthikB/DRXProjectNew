@@ -19,13 +19,13 @@ public class Allergies  {
 	WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
   @Test(priority=7)
@@ -42,20 +42,20 @@ public class Allergies  {
 		  try{
 		  //tryPassScreenshot("WM_A_09");
 		  obj.add_btn.click();
-		  obj.addAllergy_btn.click();
+		  //obj.addAllergy_btn.click();
 		  obj.drug_txt.sendKeys("lipi");
 		 WebElement web = obj.drugdropdown;
 		 List<WebElement> dropdownlist = web.findElements(By.tagName("tr"));
 		  System.out.println(dropdownlist.size());
 		  for(int i =1;i< dropdownlist.size();i++){
-			  
-		  }
+			  //{
 		  obj.drug_txt.sendKeys("lipi");
 		 WebElement web1 = obj.drugdropdown;
 		  Select options = new Select(web1);
 		options.selectByIndex(1);
 		 Actions a = new Actions(driver);
 		 a.doubleClick(web1).build().perform();
+		  }
 		  }catch(Exception e){
 			 // tryFailScreenshot("WM_A_09");
 		  }
@@ -133,6 +133,7 @@ public class Allergies  {
 			  }
             
 			  obj.allergies_sort.click();
+			  obj.add_btn.click();  //// need to be removed
         	  System.out.println("reasons is seleted");
 			  }
 			 
@@ -211,14 +212,14 @@ public class Allergies  {
   
   @BeforeTest
   public void beforeTest() throws Exception {
-	 /*driver = Driver.browser("web");
-	  UserLogin us = new UserLogin();
-		// System.out.println("getDriver"+Driver.getDriver());
-		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");
-		 PatientSearch ps = new PatientSearch();
-	      ps.driver = driver;
-	      ps.patientSearch();*/
+//	 driver = Driver.browser("web");
+//	  UserLogin us = new UserLogin();
+//		// System.out.println("getDriver"+Driver.getDriver());
+//		us.driver = driver;
+//		us.doctorLogin("MIDANAR001", "Pass@123");
+//		 PatientSearch ps = new PatientSearch();
+//	      ps.driver = driver;
+//	      ps.patientSearch();
   }
 
   @AfterTest

@@ -20,13 +20,13 @@ public class Reports {
 	WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
@@ -116,11 +116,11 @@ public class Reports {
 }	
   @BeforeTest
   public void beforeTest() throws Exception {
-	  driver = Driver.browser("web");
+	  /*driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		// System.out.println("getDriver"+Driver.getDriver());
 		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");
+		us.doctorLogin("MIDANAR001", "Pass@123");*/
   }
 
   @AfterTest

@@ -31,7 +31,7 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.NAME, using = "password")
 	public WebElement password_txt;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[8]/td[3]/table/tbody/tr/td[1]/span/a/span")
+	@FindBy(how = How.XPATH, using = "//div[@class='col-xs-8 col-sm-8']/span/a[@class='squarebutton']/span[text()='Login']")
 	public WebElement userlogin_btn;
 
 	// single validation
@@ -48,8 +48,8 @@ public class Webmoduleobjects extends Driver {
 	 */
 
 	// More than 2 validations validation
-	@FindBy(how = How.XPATH, using = "//*[@id='command.errors']")
-	public WebElement user_val;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"command.errors\"]")
+	public WebElement user_val;//*[@id='command.errors']
 
 	// *[@id="loginScreen"]/table/tbody/tr[1]/td/table/tbody/tr/td[2]
 	public String useridVal() {
@@ -181,7 +181,7 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "html/body/div[2]/form/div/table/tbody/tr/td/table/tbody/tr/td/div/table[4]/tbody/tr/td[3]/span/a")
 	public WebElement pswdchange_popup_cancel_btn;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[8]/td[3]/table/tbody/tr/td[2]/span/a/span")
+	@FindBy(how = How.XPATH, using = "//div[@class='col-xs-8 col-sm-8']/span/a[@class='squarebutton']/span[text()='reset']")
 	public WebElement resetlogin_btn;
 
 	@FindBy(how = How.LINK_TEXT, using = "My Profile")
@@ -229,7 +229,8 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table[2]/tbody/tr[6]/td")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formNoSearch\"]/div/div[1]")
+	//*[@id='formNoSearch']/table[2]/tbody/tr[6]/td
 	public WebElement staff_sucess;
 
 	public String staff_sucessmsg() {
@@ -237,11 +238,14 @@ public class Webmoduleobjects extends Driver {
 		return validationtxt;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table[1]/tbody/tr/td[2]/input")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formNoSearch\"]/div/table[1]/tbody/tr/td[2]/input")
+	//*[@id='formNoSearch']/table[1]/tbody/tr/td[2]/input
 	public WebElement satff_search;
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/table")
+	//*[@id='scrollableTBodyFull']/table
 	public WebElement satff_webtable;
-	String Staff_name1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
+	String Staff_name1 = "//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[";
+	//*[@id='scrollableTBodyFull']/table/tbody
 	String Staff_name2 = "]/td[1]";
 
 	public String Staff_names(int i) {
@@ -256,7 +260,8 @@ public class Webmoduleobjects extends Driver {
 	// my profile favourite drug
 	@FindBy(how = How.LINK_TEXT, using = "Favorite Drugs")
 	public WebElement favourite_lnk;
-	@FindBy(how = How.XPATH, using = "//*[@id='criteriaSearch']/table/tbody/tr[6]/td")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"criteriaSearch\"]/div/div[5]/div")
+	//*[@id='criteriaSearch']/table/tbody/tr[6]/td
 	public WebElement practicelist_sucess;
 
 	public String addpractice_sucess(int i) {
@@ -329,7 +334,8 @@ public class Webmoduleobjects extends Driver {
 	public WebElement practicefavorite_lnk;
 	@FindBy(how = How.NAME, using = "DrugName")
 	public WebElement practicesearch_txt;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table[3]/tbody/tr[3]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/table")
+	//*[@id='formNoSearch']/table[3]/tbody/tr[3]
 	public WebElement practicefavdrug_table;
 	String qualifier1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
 	String qualifier2 = "]/td[5]";
@@ -360,7 +366,8 @@ public class Webmoduleobjects extends Driver {
 	// my profile set drug intetaction
 	@FindBy(how = How.LINK_TEXT, using = "Set Drug Interaction Level")
 	public WebElement setdruginteraction_lnk;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[4]/td/b")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formNoSearch\"]/div/div/div[2]/div/b")
+	//*[@id='formNoSearch']/table/tbody/tr[4]/td/b
 	public WebElement setdrugsucess_msg;
 
 	public String setdrugsucess_msg() {
@@ -620,7 +627,7 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[7]/td[2]/input")
 	public WebElement myprofile_ChangePassword_confirmpass;
 
-	@FindBy(how = How.LINK_TEXT, using = "Update")
+	@FindBy(how = How.XPATH, using = "(//*[@id=\"paddedLinks\"])[2]")
 	public WebElement update_LinkText;
 	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfile']/table/tbody/tr[1]/td")
 	public WebElement updatedrug_val_txt;
@@ -646,8 +653,10 @@ public class Webmoduleobjects extends Driver {
 	public WebElement Remove_LinkText;
 
 	@FindBy(how = How.LINK_TEXT, using = "<< Back")
+	//*[@id=\"paddedLinks\"]/a
 	public WebElement back_LinkText;
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfile']/table/tbody/tr[1]/td/b")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formPatientProfile\"]/div/div[1]")
+	//*[@id='formPatientProfile']/table/tbody/tr[1]/td/b
 	public WebElement updatedrug_sucess_txt;
 	@FindBy(how = How.XPATH, using = "//*[@id='doctors']/option") public WebElement report_doctorname;
 	public String report_savedocotor(){
@@ -731,7 +740,7 @@ public class Webmoduleobjects extends Driver {
 	 * "//*[@id='scrollableTBodyThreeFourth']/table/tbody/tr[1]/td[2]/span/a")
 	 * public WebElement patient_select_link;
 	 */
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyThreeFourth']/table/tbody/tr/td[2]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyThreeFourth\"]/table/tbody/tr[1]/td[2]/a")
 	public WebElement patient_select_link;
 	// patientregistration
 	@FindBy(how = How.XPATH, using = "//*[@id='leftNavigation']/table/tbody/tr/td/table/tbody/tr[2]")
@@ -1065,8 +1074,8 @@ public class Webmoduleobjects extends Driver {
 
 	@FindBy(how = How.NAME, using = "noKnownAllergy")
 	public WebElement noknownAllergy_ckbox;
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table[1]/tbody/tr[3]/td/table/tbody/tr[1]/td")
-	public WebElement noallergies;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/div[2]/label")
+	public WebElement noallergies; ////*[@id='formTabsNoProfile']/table[1]/tbody/tr[3]/td/table/tbody/tr[1]/td
 
 	public String noallergies() {
 		String str = noallergies.getText();
@@ -1075,7 +1084,8 @@ public class Webmoduleobjects extends Driver {
 
 	@FindBy(how = How.LINK_TEXT, using = "Add")
 	public WebElement add_btn;
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table/tbody/tr[3]/td/table/tbody/tr")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"targetDiv\"]/div/label[1]")
+	////*[@id='formPatientProfileTabs']/table/tbody/tr[3]/td/table/tbody/tr
 	public WebElement allergies_header;
 
 	public String allergiesheader() {
@@ -1083,7 +1093,7 @@ public class Webmoduleobjects extends Driver {
 		return str;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='sortLink']/a/img")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/table[2]/tbody/tr[1]/td[2]/input")
 	public WebElement allergies_sort;
 	String staus2 = "]/td[5]";
 
@@ -1117,7 +1127,8 @@ public class Webmoduleobjects extends Driver {
 	// patient profile
 	@FindBy(how = How.LINK_TEXT, using = "Patient Profile")
 	public WebElement patientprofiletab;
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table/tbody/tr[2]/td")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/div[2]")
+	//*[@id='formTabsNoProfile']/table/tbody/tr[2]/td
 	public WebElement pesonalprofilesucess;
 
 	public String personalsucess() {
@@ -1130,7 +1141,7 @@ public class Webmoduleobjects extends Driver {
 	public WebElement patientprofile_insurancetab;
 	@FindBy(how = How.LINK_TEXT, using = "View Details")
 	public WebElement insurance_viewdetails;
-	@FindBy(how = How.LINK_TEXT, using = "<< Back")
+	@FindBy(how = How.XPATH, using = "(//*[@id=\"paddedLinks\"]/a)[1]")
 	public WebElement insurance_back;
 
 	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table/tbody/tr[1]/td")
@@ -1141,7 +1152,8 @@ public class Webmoduleobjects extends Driver {
 		return list;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table/tbody/tr[3]/td[2]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/table[1]/tbody/tr/td[2]")
+	//*[@id='formTabsNoProfile']/table/tbody/tr[3]/td[2]
 	public WebElement insurance_results;
 
 	public String insurance_results() {
@@ -1149,7 +1161,8 @@ public class Webmoduleobjects extends Driver {
 		return list;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table/tbody/tr[3]/td[2]/b")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/table[1]/tbody/tr/td[2]/b")
+	//*[@id='formTabsNoProfile']/table/tbody/tr[3]/td[2]/b
 	public WebElement insurance_noresult;
 
 	public String insurance_noresultmsg() {
@@ -1207,9 +1220,9 @@ public class Webmoduleobjects extends Driver {
 
 	@FindBy(how = How.NAME, using = "patientLastName")
 	public WebElement report_lastname_txt;
-	@FindBy(how = How.XPATH, using = "//*[@id='divPatientSearch']/table/tbody/tr/td/table")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"divPatientSearch\"]/table")
 	public WebElement reports_search;
-	String patientxpath1 = "//*[@id='divPatientSearch']/table/tbody/tr/td/table/tbody/tr[";
+	String patientxpath1 = "//*[@id=\"divPatientSearch\"]/table/tbody/tr[";
 	String patientxpath2 = "]/td[1]";
 	String patientaddressxpath2 = "]/td[2]";
 	String patientaddxpath2 = "]/td[4]/a";
@@ -1258,7 +1271,7 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.LINK_TEXT, using = "Prescriber History")
 	public WebElement reports_prescriptionhistorytab;
 	// from date
-	@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]/td/table/tbody/tr/td/table[1]/tbody/tr[7]/td[2]/table[2]/tbody/tr[2]/td[2]/a/img")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"contentsSearch\"]/div[1]/div[1]/div[2]/div[4]/div/a/img")
 	public WebElement report_fromdate;
 	@FindBy(how = How.XPATH, using = "//*[@id='calendar_month_txt']")
 	public WebElement fromdate_month;
@@ -1385,7 +1398,8 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table/tbody/tr[1]/td[2]/table[1]/tbody/tr[2]/td[1]/input")
 	public WebElement cancel_checkbox;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfile']/table/tbody/tr[2]/td/span")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formPatientProfile\"]/div/div[1]")
+	//*[@id='formPatientProfile']/table/tbody/tr[2]/td/span
 	public WebElement cancel_cancelscreen;
 
 	public String cancelscreen() {
@@ -1421,8 +1435,8 @@ public class Webmoduleobjects extends Driver {
 	public WebElement druglist_table;
 	String druglistxpath1 = "//*[@id='scrollableTBodyDrugSearchDrugList']/table/tbody/tr[";
 	String drugxlistpath2 = "]/td[1]/a";
-
-	@FindBy(how = How.LINK_TEXT, using = "Details")
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyDrugSearchDrugList\"]/table/tbody/tr[4]/td[1]/a")
 	public WebElement drugsearch_detailslink;
 	@FindBy(how = How.NAME, using = "quantity")
 	public WebElement quantity_txt;
@@ -1535,7 +1549,8 @@ public class Webmoduleobjects extends Driver {
 	 */
 	@FindBy(how = How.XPATH, using = "//*[@id='Layer1']/table/tbody/tr[3]/td/table/tbody/tr[1]/td[2]")
 	public WebElement Alternative_popup;
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table/tbody/tr[1]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"command.errors\"]")
+	//*[@id='formPatientProfileTabs']/table/tbody/tr[1]
 	public WebElement drugsearchvali;
 
 	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[3]/div/button[1]/span")
@@ -1586,7 +1601,8 @@ public class Webmoduleobjects extends Driver {
 	}
 
 	// patient saved prescription
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table/tbody/tr[1]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"command.errors\"]")
+	//*[@id='formPatientProfileTabs']/table/tbody/tr[1]
 	public WebElement saved_confirm_val;
 
 	public String confirm_savevali() {
@@ -1602,15 +1618,17 @@ public class Webmoduleobjects extends Driver {
 		return validation;
 	}
 
-	@FindBy(how = How.LINK_TEXT, using = "<< Back")
-	public WebElement savedback_but;
+	@FindBy(how = How.LINK_TEXT, using = "<< Back")//(//span[@id='paddedLinks']/a)[1]
+	//*[@id=\"paddedLinks\"]/a)[1]
+	public WebElement savedback_but; //*[@id=\"paddedLinks\"])[1] //(//*[@id="paddedLinks"]/a)[1]
 	// @FindBy(how = How.XPATH, using =
 	// "//*[@id='contentsPatientProfileTabs']/table/tbody/tr/td/table/tbody")public
 	// WebElement Saved_table;
 
 	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
 	public WebElement Saved_table;
-	@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]")
+	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
+	//*[@id='contentsSearch']/table/tbody/tr[2]
 	public WebElement docsaved_table;
 
 	@FindBy(how = How.LINK_TEXT, using = "Reset")
@@ -1657,7 +1675,7 @@ public class Webmoduleobjects extends Driver {
 
 	@FindBy(how = How.XPATH, using = "//*[@id='tabsPatientProfile']/ul/li[2]")
 	public WebElement ssmedicationhistory_tab;
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table[2]/tbody/tr[9]/td[2]/button")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formPatientProfileTabs\"]/div/table[2]/tbody/tr[6]/td[2]/button")////*[@id='formPatientProfileTabs']/table[2]/tbody/tr[9]/td[2]/button
 	public WebElement ssmedicationhistory_gethistory;
 	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table[1]/tbody/tr/td[1]/a")
 	public WebElement ssmedicationhistory_help;
@@ -1680,10 +1698,11 @@ public class Webmoduleobjects extends Driver {
 	// favourite drug
 	@FindBy(how = How.NAME, using = "addToFavoriteDrugs")
 	public WebElement favourite_checkbox;
-	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table[2]/tbody/tr/td[2]/input")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formPatientProfileTabs\"]/div/table[2]/tbody/tr/td[2]/input")
+	////*[@id='formPatientProfileTabs']/table[2]/tbody/tr/td[2]/input
 	public WebElement favourite_search;
 	// medication history
-	String drug1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
+	String drug1 = "//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[";
 	String drug2 = "]/td[2]/a";
 	String docsav = "]/td[2]";
 
@@ -1729,7 +1748,8 @@ public class Webmoduleobjects extends Driver {
 	// disable
 	@FindBy(how = How.XPATH, using = "/html/body/div[2]/form/div[3]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[1]/td/li")
 	public WebElement disable_val;
-	String checkbox1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
+	String checkbox1 = "//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[";
+	//*[@id='scrollableTBodyFull']/table/tbody
 	String checkbox2 = "]/td[1]/input";
 
 	public WebElement medication_checkboxes(int i) {

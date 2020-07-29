@@ -46,13 +46,14 @@ public class Insurance {
   }
   @BeforeTest
   public void beforeTest() throws Exception {
-	  driver=Driver.browser("web");
+	  /*driver=Driver.browser("web");
       UserLogin us = new UserLogin();
 	  us.driver = driver;
-      us.doctorLogin("midrhpn001", "password");
+      //us.doctorLogin("midrhpn001", "password");
+      us.doctorLogin("MIDANAR001", "Pass@123");
       PatientSearch ps = new PatientSearch();
       ps.driver=driver;
-      ps.patientSearch();
+      ps.patientSearch();*/
   }
 
   @AfterTest

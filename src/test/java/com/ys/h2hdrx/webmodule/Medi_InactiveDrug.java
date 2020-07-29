@@ -31,10 +31,12 @@ public class Medi_InactiveDrug {
 		  //obj.medication_druglist(i);
 		  System.out.println( obj.medication_druglists(i));
 		// System.out.println(obj.medicationHistoryStatus);
-		  if ((obj.medication_druglists(i).trim().equals("Actimmune 2000000 UNIT/0.5ML Subcutaneous Solution"))){
+		  if ((obj.medication_druglists(i).trim().equals("happyd"))){
+			  //Actimmune 2000000 UNIT/0.5ML Subcutaneous Solution
 			  obj.medication_checkboxes(i).click();
 		  }
-				  if((obj.medication_druglists(i).trim().equals("Gastrocrom 100 MG/5ML Oral Concentrate"))) {
+				  if((obj.medication_druglists(i).trim().equals("lipitor"))) {
+					  //Gastrocrom 100 MG/5ML Oral Concentrate
 					  obj.medication_checkboxes(i).click();
 					  obj.mh_inactivatedrug.click();
 					  

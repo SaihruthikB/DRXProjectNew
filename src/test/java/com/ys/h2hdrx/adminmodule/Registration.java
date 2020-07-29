@@ -44,7 +44,7 @@ public class Registration {
 	  vendor.selectByIndex(14);
 	  Select practice = new Select(obj.registerdoctor_practice);
 	  practice.selectByIndex(1);
-	  FileInputStream fi = new FileInputStream("Input Test Data\\Register.xlsx");
+	  FileInputStream fi = new FileInputStream("/Users/admin/Documents/workspace/H2HDrxProductionNew/Input Test Data/Register.xlsx");
 	  XSSFWorkbook w = new XSSFWorkbook(fi);
 	  XSSFSheet s = w.getSheetAt(0);
 	  int row = s.getLastRowNum();

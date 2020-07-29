@@ -19,13 +19,13 @@ public class Scheduledrug  {
 	WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
   @Test (priority=4)
@@ -78,63 +78,14 @@ public class Scheduledrug  {
 		obj.drugsearch_txt.click();
 		obj.drugsearch_detailslink.click();
 		tryPassScreenshot("WM_RX_19");
-		obj.back_LinkText.click();
+		//obj.back_LinkText.click(); /// need to be removed
 		tryPassScreenshot("WM_RX_20");
 		}catch (Exception e) {
 			 tryFailScreenshot("WM_RX_19");
 			 tryFailScreenshot("WM_RX_20");
 			}
-		try{
-		obj.drug_txt.sendKeys("xana");
-		obj.reset_LinkText.click();
-		tryPassScreenshot("WM_RX_56");
-		}catch (Exception e) {
-		 tryFailScreenshot("WM_RX_56");
-	}
-		obj.drug_txt.sendKeys("xana");
-		Thread.sleep(3000);
-		// drug options
-		WebElement web = obj.drug_table;
-		Select options = new Select(web);
-
-		List<WebElement> list = options.getOptions();
-
-		System.out.println(list.size());
-		for (int i = 1; i <= list.size(); i++) {
-			obj.Drug_list(i);
-			System.out.println(obj.Drug_list(i));
-			if (obj.Drug_list(i).equalsIgnoreCase("xanax")) {
-			/* Actions a = new Actions(driver);
-			a.doubleClick(obj.Drugsearch(i)).build().perform();*/
-				obj.drugsearch_txt.click();
-				break;
-			}
-		}
-		// drug list
-		WebElement WebElement = obj.druglist_table;
-		List<WebElement> list1 = WebElement.findElements(By.tagName("tr"));
-
-		System.out.println(list1.size());
-		for (int i = 1; i <= list1.size(); i++) {
-			obj.Drugs_list(i);
-			System.out.println(obj.Drugs_list(i));
-			if (obj.Drugs_list(i).equalsIgnoreCase("Xanax 2 MG Oral Tablet")) {
-				/*obj.drugsearch_detailslink.click();
-				obj.close_lnk.click();
-				tryPassScreenshot("WM_RX_27");*/
-				obj.Drugs_lists(i).click();
-				tryPassScreenshot("WM_RX_21");
-				break;
-				
-				
-			}
-			else{
-				tryFailScreenshot("WM_RX_21");
-				//tryFailScreenshot("WM_RX_27");
-			}
-
-		}
-		System.out.println(obj.alternativepopup());
+		/////////  need to be added removed lines here
+				System.out.println(obj.alternativepopup());
 		  if(obj.alternativepopup().contains("Alternatives:")){
 		  
 		  obj.altclose_lnk.click();
@@ -238,7 +189,7 @@ public class Scheduledrug  {
 	  Thread.sleep(3000);
 	}
 
-	@Test(priority=4)
+	@Test(priority=5)
 	public void sendtopharmacy() throws Exception {
 		obj.sendtophar_txt.click();
 		//String str=driver.findElement(By.xpath("/html/body/div[3]/div[3]")).getText();
@@ -276,7 +227,7 @@ public class Scheduledrug  {
 		UserLogin us = new UserLogin();
 		// System.out.println("getDriver"+Driver.getDriver());
 		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "password");
+		us.doctorLogin("MIDANAR001", "Pass@123");
 		PatientSearch ps = new PatientSearch();
 	      ps.driver = driver;
 	      ps.patientSearch();

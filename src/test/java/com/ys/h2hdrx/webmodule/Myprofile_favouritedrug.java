@@ -17,13 +17,13 @@ public class Myprofile_favouritedrug {
 	Webmoduleobjects obj;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	int i;
@@ -102,8 +102,8 @@ public class Myprofile_favouritedrug {
 	}
   @Test(priority=2)
   public void addpracticelist() throws Exception {
-	 /* obj.myprofile_lnk.click();
-	  obj.favourite_lnk.click();*/
+	  obj.myprofile_lnk.click();
+	  obj.favourite_lnk.click();
 	  obj.add_btn.click();
 	  obj.drugName_txt.sendKeys("lipi");
 		 obj.drugsearch_txt.click();
@@ -131,9 +131,14 @@ public class Myprofile_favouritedrug {
 		}			
 		//System.out.println(obj.addpractice_sucess(i));	
 		if(obj.addpractice_sucess(i).trim().equals("Added selected drugs to favorite list by practice.")){
-			obj.patientsearch_link.click();
+			
+			System.out.println("Passed the test");
+			// This should finish the test below lines are not required.
+			/*obj.patientsearch_link.click();
 		PatientSearch ps = new PatientSearch();
-		ps.patientSearch();
+		ps.patientSearch();*/ 
+			
+			///need to discuss with nagamani for this 
 		}
 		
 	
@@ -165,7 +170,7 @@ public class Myprofile_favouritedrug {
   
   @BeforeTest
   public void beforeTest() throws Exception {
-	/* driver = Driver.browser("web");
+	 /*driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		
 		us.driver = driver;

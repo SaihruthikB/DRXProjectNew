@@ -12,20 +12,20 @@ public class SendandPrint   {
 	WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	@Test(priority=15)
 	 public void Sendandprintbutton() throws Exception  {
 		  obj = PageFactory.initElements(driver, Webmoduleobjects.class);
-		//obj.RxPad_tab.click();
-		  obj.reset_LinkText.click();
+		obj.RxPad_tab.click();  /// These two lines to be used when we run it for regression.
+		 obj.reset_LinkText.click(); /// These two lines to be used when we run it for regression.
 		  Rxpad rx = new Rxpad();
 	      rx.driver=driver;
 		  rx.Confirmprescription();
@@ -55,7 +55,7 @@ public class SendandPrint   {
 	  }
 	  @BeforeTest
 	  public void beforeTest() throws Exception {
-		 /* driver = Driver.browser("web");
+		 /*driver = Driver.browser("web");
 			UserLogin us = new UserLogin();
 			// System.out.println("getDriver"+Driver.getDriver());
 			us.driver = driver;

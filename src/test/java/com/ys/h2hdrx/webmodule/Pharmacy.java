@@ -45,7 +45,8 @@ List<WebElement> list=pharmacylist.findElements(By.tagName("tr"));*/
       UserLogin us = new UserLogin();
       // System.out.println("getDriver"+Driver.getDriver());
       us.driver = driver;
-      us.doctorLogin("MIDANAR001", "password");
+      us.doctorLogin("MIDANAR001", "Pass@123");
+      //MIDANAR001
       PatientSearch ps = new PatientSearch();
       ps.driver=driver;
       ps.patientSearch();

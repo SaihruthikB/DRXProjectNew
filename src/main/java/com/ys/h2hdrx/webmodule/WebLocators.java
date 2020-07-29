@@ -25,13 +25,14 @@ public class WebLocators extends Driver {
 	@FindBy(how = How.NAME, using = "password")
 	public WebElement password_txt;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[8]/td[3]/table/tbody/tr/td[1]/span/a/span")
+	@FindBy(how = How.XPATH, using = "")
 	public WebElement userlogin_btn;
 
 	// single validation
 	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[1]/td/table/tbody/tr/td[2]/li")
 	public WebElement user_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[4]/td[3]/input/") public WebElement user_val1;
+	@FindBy(how = How.XPATH, using = "//*[@id='loginScreen']/table/tbody/tr[4]/td[3]/input/") 
+	public WebElement user_val1;
 	
 	public String userVal() {
 		String useridVal = user_val.getText();

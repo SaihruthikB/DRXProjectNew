@@ -6,17 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 
-public class Myprofile_Personal {
+public class Myprofile_Personal { 
 	Webmoduleobjects obj;
 	WebDriver driver;
 	@Test(enabled = false)
 	protected void tryPassScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Pass");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Pass");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	@Test(enabled = false)
 	protected void tryFailScreenshot(String TestCaseId) throws Exception {
-		WriteExcel.writepassfail(TestCaseId, "Output Data\\Result TestCase.xlsx", "Fail");
+		WriteExcel.writepassfail(TestCaseId, "Output Data/Result TestCase1.xlsx", "Fail");
 		CaptureScreenshot.Capture(TestCaseId, "WebModule");
 	}
 	@Test(priority=7)
@@ -37,8 +37,8 @@ public class Myprofile_Personal {
 		 /* driver = Driver.browser("web");
 		   UserLogin us = new UserLogin();
 		  us.driver = driver;
-			us.doctorLogin("MIDANAR001", "Pass@123");
-		*/
+			us.doctorLogin("MIDANAR001", "Pass@123");*/
+		
   }
 
   @AfterTest
