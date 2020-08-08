@@ -31,14 +31,14 @@ public class PatientFavouriteDrug {
 	  public void FavouriteDrug() throws Exception {
 		
 		  obj = PageFactory.initElements(driver, Webmoduleobjects.class);
-		obj.RxPad_tab.click();
-		  obj.reset_LinkText.click();
-		  Rxpad rx = new Rxpad();
-	      rx.driver=driver;
+	obj.RxPad_tab.click();
+	  obj.reset_LinkText.click();
+	Rxpad rx = new Rxpad();
+	   rx.driver=driver;
 		  rx.Confirmprescription();
-		 obj.savedback_but.click();
+	 obj.savedback_but.click();
 		  obj.favourite_checkbox.click();
-		  obj.confirm_but.click();
+	 obj.confirm_but.click();
 		  try{
 		  obj.favDrugPatient_tab.click();
 		tryPassScreenshot("WM_FDP_01");
@@ -48,22 +48,25 @@ public class PatientFavouriteDrug {
 		 // obj.favourite_search.sendKeys("Lipitor 80 MG Oral Tablet");
 		  obj.favourite_search.sendKeys("Lipitor");
 		  obj.search_btn.click();
+		  Thread.sleep(3000);
 		  WebElement WebElement = obj.Saved_table;
 		  List<WebElement> list1= WebElement.findElements(By.tagName("tr"));
 		  
 		  System.out.println(list1.size());
 		  for(int i =1;i<=list1.size();i++){
 		  //obj.medication_druglist(i);
-		  System.out.println( obj.medication_druglist(i));
-		if(obj.medication_druglist(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
+		  System.out.println( obj.medication_druglist_PSP(i));
+		if(obj.medication_druglist_PSP(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
 			//obj.Detailslink.click();
 			//obj.send_close.click();
-			obj.medication_druglink(i).click();
+			//obj.medication_checkboxes(i).click(); 
+			
+			obj.medication_druglink(i).click(); //(i think this is checkbox)
 			obj.confirm_but.click();
 			tryPassScreenshot("WM_SPSP_08");
 			obj.sendtophar_txt.click();
 			obj.send_close.click();
-			break;
+			//break;
 		}
 		  }
 		  }
@@ -78,13 +81,13 @@ public class PatientFavouriteDrug {
 		  
 		  System.out.println(list1.size());
 		  for(int i =1;i<=list1.size();i++){
-		 if(obj.medication_druglist(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
+		 if(obj.medication_druglist_PSP(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
 				obj.medication_checkboxes(i).click();  
 				obj.confirm_but.click();
 				tryPassScreenshot(" WM_SPSP_08");
 				obj.sendtophar_txt.click();
 				obj.send_close.click();
-				break;
+				//break;
 		 }
 		  }
 				 Rxpad rx1 = new Rxpad();
@@ -113,7 +116,7 @@ public class PatientFavouriteDrug {
 					  
 					  System.out.println(list1.size());
 					  for(int i =1;i<=list1.size();i++){
-					if(obj.medication_druglist(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
+					if(obj.medication_druglist_PSP(i).equalsIgnoreCase("Lipitor 80 MG Oral Tablet")){
 						obj.medication_checkboxes(i).click();
 						obj.delete_lnktxt.click();
 						 tryPassScreenshot(" WM_SPSP_11");

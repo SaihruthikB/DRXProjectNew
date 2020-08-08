@@ -31,12 +31,12 @@ public class DoctorSavedPrescription  {
 	  public void savedprescription() throws Exception {
 		
 		  obj=PageFactory.initElements(driver, Webmoduleobjects.class);
-		  obj.RxPad_tab.click();
-		  Rxpad rx = new Rxpad();
-	      rx.driver=driver;
-		  rx.Confirmprescription();
+		 obj.RxPad_tab.click(); //need to remove for since execution
+		 Rxpad rx = new Rxpad(); //need to remove
+	   rx.driver=driver; //need to remove
+		rx.Confirmprescription(); //need to remove
 		 // tryPassScreenshot("WM_SPSP_01");
-		  obj.save_lnkText.click();
+		  obj.save_lnkText.click(); //need to remove
 		  obj.doctorsavedprescription_tab.click();
 		  /*PatientSavedPrescription ps= new PatientSavedPrescription();
 		  ps.savedprescription();*/

@@ -41,22 +41,29 @@ public class Allergies  {
 	  if(obj.noallergies().equals("No Known Allergy")){
 		  try{
 		  //tryPassScreenshot("WM_A_09");
-		  obj.add_btn.click();
+		 obj.add_btn.click(); //need to remove 
 		  //obj.addAllergy_btn.click();
 		  obj.drug_txt.sendKeys("lipi");
 		 WebElement web = obj.drugdropdown;
-		 List<WebElement> dropdownlist = web.findElements(By.tagName("tr"));
+		 //List<WebElement> dropdownlist = web.findElements(By.tagName("label")); //tr
+		 List<WebElement> dropdownlist = web.findElements(By.xpath("//div[@id='targetDiv']/div/label"));
 		  System.out.println(dropdownlist.size());
-		  for(int i =1;i< dropdownlist.size();i++){
+		  ///below for-loop is not executing
+		  
+		  for(int i=1;i< dropdownlist.size();i++){ ///should make i value to 1
 			  //{
-		  obj.drug_txt.sendKeys("lipi");
-		 WebElement web1 = obj.drugdropdown;
-		  Select options = new Select(web1);
-		options.selectByIndex(1);
+			  /*obj.drug_txt.clear();
+		  obj.drug_txt.sendKeys("lipi");// need to check 
+		  Thread.sleep(1000);*/
+		 WebElement web1 = obj.drugdropdown1; //drugdropdown
+		//  Select options = new Select(web1); //nned to remove
+	//	options.selectByIndex(1); // need to remove
 		 Actions a = new Actions(driver);
-		 a.doubleClick(web1).build().perform();
+		// a.doubleClick(web1).build().perform();
+		 a.moveToElement(web1).doubleClick().build().perform();
+		 Thread.sleep(3000);
 		  }
-		  }catch(Exception e){
+		  } catch(Exception e){
 			 // tryFailScreenshot("WM_A_09");
 		  }
 		    
@@ -66,8 +73,8 @@ public class Allergies  {
 		//obj.Allergies_tab.click();
 		  //obj.addAllergy_btn.click();
 		  obj.drug_txt.sendKeys("lipi");
-		  Thread.sleep(3000);
-			 WebElement web = obj.drugdropdown;
+		 // Thread.sleep(3000);
+			 WebElement web = obj.drugdropdown1;
 			 List<WebElement> druglist = new Select(web).getOptions();
 			  System.out.println(druglist.size());
 			  for(int i =1;i<=druglist.size();i++){
@@ -96,62 +103,78 @@ public class Allergies  {
 			  if(obj.useridVal().equalsIgnoreCase("Please select or enter a reaction.")){
 				  //tryPassScreenshot("WM_A_11");
 				  WebElement allergies =obj.allergies_tab;
-			    	List<WebElement> list = allergies.findElements(By.tagName("td"));
+			    	//List<WebElement> list = allergies.findElements(By.tagName("td"));
+			    	List<WebElement> list = allergies.findElements(By.xpath("//div[@id='formTabsNoProfile']/div/table[2]/tbody/tr[1]/td"));
 			    	 System.out.println(list.size());
 					  for(int j =1;j<=list.size();j++){
 						 System.out.println(obj.allergyreactions(j));
 						  if(obj.allergyreactions(j).trim().equalsIgnoreCase("' Anemia")){
-							 obj.allergyreactioncheckbox(j).click();
-							obj.otherallergies_txt.sendKeys("other");
-							break;
+							 obj.allergyreactioncheckbox(j).click();//
+							obj.otherallergies_txt.sendKeys("other123");
+							obj.allergies_note.sendKeys("Getting vomiting imediate after swallowing tablet");
+							//break;
 						  }
 					  }
-				            obj.allergies_calender.click();
-				            obj.allergies_calendertomarow.click();
-				           /* obj.add_btn.click();
+				            obj.allergies_calender.click(); //need to remove
+				            obj.allergies_calendertomarow.click(); //need to remove
+				           // obj.allergies_note.sendKeys("Getting vomiting imediate after swallowing tablet");
+				            obj.add_btn.click();
+				            Thread.sleep(3000);
 				            if(obj.useridVal().equalsIgnoreCase("Onset Date should not be a future date.")){
 				            	 obj.allergies_calender.click();
-				            	obj.allergies_todaydate.click();*/
-						          obj.allergies_note.sendKeys("Getting vomiting imediate after swallowing tablet");
+				            	obj.allergies_todaydate.click();//need toremoved if loop
+						         // obj.allergies_note.sendKeys("Getting vomiting imediate after swallowing tablet");
 						          obj.add_btn.click();
 						         // tryPassScreenshot("WM_A_12");
+						          System.out.println("reasons is seleted");
 						          
 					        	  
 				            }
+				            
+			  }
 				               
-								
+					
 			  
-			  if(obj.allergiesheader().trim().equalsIgnoreCase("Reaction(s)")){
+			  
+				            
+				            
+			  
+		//	 if(obj.allergiesheader().trim().equalsIgnoreCase("Reaction(s)")){
 	        	  
 			  		
 		         
 			  
-			  }
-			  else{
+		//	 }
+		//	  else{
 				  //tryFailScreenshot("WM_A_11");
 				  //tryFailScreenshot("WM_A_12");
-			  }
-            
-			  obj.allergies_sort.click();
+		//	  }
+            /// needto check
+			 /* obj.allergies_sort.click();
 			  obj.add_btn.click();  //// need to be removed
-        	  System.out.println("reasons is seleted");
+        	  System.out.println("reasons is seleted");*/  // need to check
 			  }
 			 
-			  //}
+            // }  need to remove this comment 
 	 
 			  @Test(priority=9)
 			  public void allergies_edit() throws Exception {
 				
 						//System.out.println(obj.allergiesheader());
-						
+						System.out.println("entered into edit class");
 					
 				  WebElement list = obj.satff_webtable;
-				  List<WebElement> allergieslist=list.findElements(By.tagName("tr"));
+				  List<WebElement> allergieslist=list.findElements(By.xpath("//div[@id='scrollableTBodyFull']/table/tbody/tr"));
 				  System.out.println(allergieslist.size());
-				  for(int i =1;i<allergieslist.size();i++){
+				  for(int i =1;i<=allergieslist.size();i++){
+					  System.out.println("entered into edit class");
 					 System.out.println(obj.Staff_names(i));
 					 System.out.println(obj.allergiesstatus(i));
-					 if ((obj.Staff_names(i).trim().contains("xya")) ) {
+					 System.out.println(obj.allergiesstatus(i));
+					 System.out.println("Enetred status");
+					 if ((obj.Staff_names(i).trim().equalsIgnoreCase("Lipitor")) ) {
+						 //xya
+						 System.out.println("Enetred status");
 					
 						  obj.edit(i).click();
 						  obj.otherallergies_txt.clear();
@@ -175,7 +198,7 @@ public class Allergies  {
 						  for(int i =1;i<=allergieslist.size();i++){
 							 System.out.println(obj.Staff_names(i));
 							 System.out.println(obj.allergiesstatus(i));
-							 if ((obj.Staff_names(i).trim().equalsIgnoreCase("xya")) ) {
+							 if ((obj.Staff_names(i).trim().equalsIgnoreCase("Lipitor")) ) {
 							//System.out.println(obj.inactive(i));
 								 
 								 obj.inactive(i).click();
@@ -212,14 +235,14 @@ public class Allergies  {
   
   @BeforeTest
   public void beforeTest() throws Exception {
-//	 driver = Driver.browser("web");
-//	  UserLogin us = new UserLogin();
-//		// System.out.println("getDriver"+Driver.getDriver());
-//		us.driver = driver;
-//		us.doctorLogin("MIDANAR001", "Pass@123");
-//		 PatientSearch ps = new PatientSearch();
-//	      ps.driver = driver;
-//	      ps.patientSearch();
+	 /*driver = Driver.browser("web");
+	  UserLogin us = new UserLogin();
+		// System.out.println("getDriver"+Driver.getDriver());
+		us.driver = driver;
+		us.doctorLogin("MIDANAR001", "Pass@123");
+		 PatientSearch ps = new PatientSearch();
+	      ps.driver = driver;
+	      ps.patientSearch();*/
   }
 
   @AfterTest

@@ -37,8 +37,8 @@ public class Medicationhistory_confirmcancellation {
 	  for(int i =1;i<=list1.size();i++){
 	  //obj.medication_druglist(i);
 	  System.out.println( obj.medication_druglists(i));
-	 System.out.println(obj.medicationHistoryStatus);
-	  if (obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet  *")) {
+	 //System.out.println(obj.medicationHistoryStatus);
+	  if (obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet")) {
 			obj.medication_checkboxes(i).click();
 		  try{
 		  obj.mh_confirmcancellation.click();
@@ -70,9 +70,9 @@ public class Medicationhistory_confirmcancellation {
 			  }*/
 			
 			 
-		  break;
-		  } 
-	  else if(obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet")) {
+		 // break;
+		  } //else if condition
+	  if(obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet *")) {
 		  obj.medication_checkboxes(i).click();
 		  try{
 		  obj.mh_confirmcancellation.click();
@@ -116,12 +116,12 @@ public class Medicationhistory_confirmcancellation {
 	  for(int i =1;i<=list1.size();i++){
 	  //obj.medication_druglist(i);
 	  System.out.println( obj.medication_druglists(i));
-	 System.out.println(obj.medicationHistoryStatus);
-	  if (obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet  *")) {
+	// System.out.println(obj.medicationHistoryStatus);
+	  if (obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet")) {
 			obj.medication_checkboxes(i).click();
 			obj.mh_confirmcancellation.click();
 		  obj.savedback_but.click();
-		  break;
+		 // break;
 	  }
 	  else if (obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet")) {
 				obj.medication_checkboxes(i).click();
@@ -136,23 +136,30 @@ public class Medicationhistory_confirmcancellation {
 	  	public void Confirmcanellation_remove() throws Exception {
 			
 	 WebElement WebElement = obj.medicationhistory_table;
-	  List<WebElement> list1= WebElement.findElements(By.tagName("tr"));
+	 List<WebElement> list1= WebElement.findElements(By.xpath("//div[@id='scrollableTBodyFull']/table/tbody/tr"));
+	 // List<WebElement> list1= WebElement.findElements(By.tagName("tr"));
 	  
 	  System.out.println(list1.size());
-	  for(int i =1;i<=list1.size();i++){
+	  for(int i =1 ;i<=list1.size();i++){
 	  //obj.medication_druglist(i);
 	  System.out.println( obj.medication_druglists(i));
+	  
+	  
 	// System.out.println(obj.medicationHistoryStatus);
-	  if ((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet  *"))){
+	  if ((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet"))){
+		  obj.medication_checkboxes(i).click();
+		  obj.mh_confirmcancellation.click();
+		  
+		 obj.savedremove_but.click();/// added for script stability  
+		 
+		 break;
+	  }
+	  else if((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet *"))){
 		  obj.medication_checkboxes(i).click();
 		  obj.mh_confirmcancellation.click();
 		  obj.savedremove_but.click(); /// added for script stability
 		  
-	  }
-	  else if((obj.medication_druglists(i).trim().equals("Lipitor 80 MG Oral Tablet"))){
-		  obj.medication_checkboxes(i).click();
-		  obj.mh_confirmcancellation.click();
-		  obj.savedremove_but.click(); /// added for script stability
+		  break;
 	  }
 		  /*if((obj.medication_druglists(i).trim().equals("Zestril 10 MG Oral Tablet"))) {
 			  obj.medication_checkboxes(i).click();
@@ -181,18 +188,21 @@ public class Medicationhistory_confirmcancellation {
 	
 	}*/ //need to check with nagamani ---- Dono why this code is 
 	  
-	 /* WebElement WebElement1 = obj.cancel_table;
-	  List<WebElement> cancellist1= WebElement.findElements(By.tagName("td"));
+	  WebElement WebElement1 = obj.cancel_table;
+	 
+	 // List<WebElement> cancellist1= WebElement.findElements(By.tagName("td"));
+	  List<WebElement> cancellist1= WebElement1.findElements(By.xpath("//*[@id=\"scrollableTBodyFull\"]/div/div"));
+	  
 	  
 	  System.out.println(cancellist1.size());
 	  for(int i =1;i<=cancellist1.size();i++){
 	  System.out.println(obj.confirmcancellation_num());
-	  if(obj.confirmcancellation_num().equalsIgnoreCase("Rx No. : 1")){  
+	  if(obj.confirmcancellation_num().equalsIgnoreCase("Rx No. :")){  
 			 obj.cancelcheck1s(i).click();	  
 			obj.savedremove_but.click();
 		 
 		  
-	  }}*/
+	  }}
 	  
 	 }
   @BeforeTest

@@ -154,9 +154,9 @@ public class Myprofile_Changepassword {
 	   		obj.myprofile_oldpswrd_txt.clear();
 	       	obj.myprofile_oldpswrd_txt.sendKeys("Pass@123");
 	    	obj.myprofile_newpswrd_txt.clear();
-	       	obj.myprofile_newpswrd_txt.sendKeys("Pass@123");
+	       	obj.myprofile_newpswrd_txt.sendKeys("Rass@123");
 	        obj.myprofile_confirmpswrd_txt.clear();
-	      	 obj.myprofile_confirmpswrd_txt.sendKeys("Pass@123");
+	      	 obj.myprofile_confirmpswrd_txt.sendKeys("Rass@123");
 	      	  obj.update.click();
 	      	//System.out.println(obj.myprofile_sucess_message());  
 	  
@@ -179,7 +179,7 @@ public class Myprofile_Changepassword {
 	  }
   @BeforeTest
   public void beforeTest() throws Exception {
-	  /*driver = Driver.browser("web");
+	 /* driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		
 		us.driver = driver;

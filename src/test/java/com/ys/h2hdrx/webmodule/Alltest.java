@@ -147,19 +147,19 @@ ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
 		 pp.driver = driver;
 		 pp.Patientprofile_patientinforamtion();
   }
-  @Test(priority=14)
+ /* @Test(priority=14)
   public void Insurance() throws Exception {
 	  Insurance in = new Insurance();
 		 in.driver = driver;
 		 in.InsuranceInfo();
-  }
+  }*/
 /*  @Test(priority=14)
   public void patientregistration() throws Exception {
 	  PatientRegistration in = new Insurance();
 		 in.driver = driver;
 		 in.InsuranceInfo();
   }*/
-  @Test(priority=15)
+  @Test(priority=14)
   public void Medicationhistory() throws Exception {
 	  MedicationHistory mh = new MedicationHistory();
 		 mh.driver = driver;
@@ -168,7 +168,7 @@ ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
 		 mh.Updatedrug();
 		
   }
-  @Test(priority=16)
+  @Test(priority=15)
   public void Medication_cancellation() throws Exception {
 	  Medicationhistory_confirmcancellation mc = new Medicationhistory_confirmcancellation();
 	 mc.driver=driver;
@@ -176,14 +176,14 @@ ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
 		 mc.Confirmcanellation_back();
 		// mc.Confirmcanellation_remove();
   }
-  @Test(priority=17,enabled=false)
+  @Test(priority=16,enabled=false)
   public void Report_patienthistory() throws Exception {
 	  Reports r = new Reports();
 	  r.driver=driver;
 	  r.PrescriptionReport();
 	  r.PrescriptionReport_remove();
   }
-  @Test(priority=18,enabled=false)
+  @Test(priority=17,enabled=false)
   public void repoer_prescriberhistory() throws Exception {
 	  PrescriberHistory ph = new PrescriberHistory();
 	  ph.driver=driver;

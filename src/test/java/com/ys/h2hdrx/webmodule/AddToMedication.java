@@ -50,16 +50,16 @@ public class AddToMedication  {
 	  }
 	 @BeforeTest
 	 public void beforeTest() throws Exception {
-		 /*driver = Driver.browser("web");
+		 driver = Driver.browser("web");
 			UserLogin us = new UserLogin();
 			// System.out.println("getDriver"+Driver.getDriver());
 			us.driver = driver;
 			
 			us.doctorLogin("MIDANAR001", "Pass@123");
-			 System.out.println("add to medication");
+			 //System.out.println("add to medication");
 			 PatientSearch ps = new PatientSearch();
 		      ps.driver = driver;
-		      ps.patientSearch();*/
+		      ps.patientSearch();
 		      /*Rxpad rxp = new Rxpad();
 		      rxp.driver=driver;
 				 rxp.Confirmprescription();*/

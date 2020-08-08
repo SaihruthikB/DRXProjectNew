@@ -154,11 +154,11 @@ public class PrescriberHistory {
   
   @BeforeTest
   public void beforeTest() throws Exception {
-	 driver = Driver.browser("web");
+	 /*driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		// System.out.println("getDriver"+Driver.getDriver());
 		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");
+		us.doctorLogin("MIDANAR001", "Pass@123");*/
   }
 
   @AfterTest

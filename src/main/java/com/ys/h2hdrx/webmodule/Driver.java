@@ -25,7 +25,8 @@ public class Driver {
 				fi = new FileInputStream("Input Test Data/Url_Browser1.xlsx");
 				wb = new XSSFWorkbook(fi);
 				s = wb.getSheetAt(0);
-				url = s.getRow(3).getCell(0).getStringCellValue();
+				//url = s.getRow(3).getCell(0).getStringCellValue();
+				url = s.getRow(12).getCell(0).getStringCellValue();
 
 				// driver.findElement(By.xpath("//*[@id='rightCommercialOne']/map/area")).click();
 

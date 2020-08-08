@@ -170,11 +170,11 @@ public class Myprofile_favouritedrug {
   
   @BeforeTest
   public void beforeTest() throws Exception {
-	 /*driver = Driver.browser("web");
+	 driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		
 		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");*/
+		us.doctorLogin("MIDANAR001", "Pass@123");
   }
 
   @AfterTest

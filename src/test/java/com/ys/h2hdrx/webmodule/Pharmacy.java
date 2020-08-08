@@ -31,9 +31,11 @@ List<WebElement> list=pharmacylist.findElements(By.tagName("tr"));*/
 	  pharmacy.selectByVisibleText("Texas");
 	  obj.searchPharmacy_btn.click();
 	  WebElement pharmacylist =obj.pharmacy_table;
-	  List<WebElement> list=pharmacylist.findElements(By.tagName("td"));
+	  List<WebElement> list=pharmacylist.findElements(By.xpath("//*[@id=\"scrollableTBodyDrugSearchAltList\"]/table/tbody/tr/td[1]"));
+	  //List<WebElement> list=pharmacylist.findElements(By.tagName("td"));
 	  System.out.println(list.size());
-	  for(int i =1;i<list.size();i++){
+	  for(int i =1;i<list.size();i++)
+	  {
 		  System.out.println(obj.pharmacy(i));
 		
 	  }
@@ -41,7 +43,7 @@ List<WebElement> list=pharmacylist.findElements(By.tagName("tr"));*/
   }
   @BeforeTest
   public void beforeTest() throws Exception  {
-	  driver = Driver.browser("web");
+	  /*driver = Driver.browser("web");
       UserLogin us = new UserLogin();
       // System.out.println("getDriver"+Driver.getDriver());
       us.driver = driver;
@@ -49,7 +51,7 @@ List<WebElement> list=pharmacylist.findElements(By.tagName("tr"));*/
       //MIDANAR001
       PatientSearch ps = new PatientSearch();
       ps.driver=driver;
-      ps.patientSearch();
+      ps.patientSearch();*/
       
 }
 

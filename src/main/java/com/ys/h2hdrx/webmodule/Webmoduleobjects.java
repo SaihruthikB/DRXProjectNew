@@ -241,10 +241,10 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"formNoSearch\"]/div/table[1]/tbody/tr/td[2]/input")
 	//*[@id='formNoSearch']/table[1]/tbody/tr/td[2]/input
 	public WebElement satff_search;
-	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/table")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/table/tbody")
 	//*[@id='scrollableTBodyFull']/table
 	public WebElement satff_webtable;
-	String Staff_name1 = "//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[";
+	String Staff_name1 = "//div[@id='scrollableTBodyFull']/table/tbody/tr[";
 	//*[@id='scrollableTBodyFull']/table/tbody
 	String Staff_name2 = "]/td[1]";
 
@@ -483,7 +483,8 @@ public class Webmoduleobjects extends Driver {
 		return validationtxt;
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[10]/td")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formNoSearch\"]/div/div/div[6]/div")
+	//*[@id='formNoSearch']/table/tbody/tr[10]/td
 	public WebElement myprofile_sucess;
 
 	public String myprofile_sucess_message() {
@@ -743,21 +744,27 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyThreeFourth\"]/table/tbody/tr[1]/td[2]/a")
 	public WebElement patient_select_link;
 	// patientregistration
-	@FindBy(how = How.XPATH, using = "//*[@id='leftNavigation']/table/tbody/tr/td/table/tbody/tr[2]")
+	@FindBy(how = How.XPATH, using = "(//*[@id=\"leftNav\"]/a)[1]")
+	//*[@id='leftNavigation']/table/tbody/tr/td/table/tbody/tr[2]
 	public WebElement Patienregistartion_tab;
 	@FindBy(how = How.LINK_TEXT, using = "Register")
 	public WebElement register_registerbut;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[1]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Last Name is required.']")
+	//(//span[@id='command.errors']/child::node())[1]
+	//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[1]
 	public WebElement Patienregistartion_lastname_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[5]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Zip Code Required.']")
 	public WebElement Patienregistartion_zip_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[4]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='City Required.']")
 	public WebElement Patienregistartion_city_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[6]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Date of Birth is required.']")
+	////*[@id='formNoSearch']/table/tbody/tr[1]/td/li[6]
 	public WebElement Patienregistartion_dateofbirth_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[7]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Gender is Required.']")
+	//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[7]
 	public WebElement Patienregistartion_gender_val;
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[3]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Address is required.']")
+	//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[3]
 	public WebElement Patienregistartion_addrees_val;
 	@FindBy(how = How.NAME, using = "middleName")
 	public WebElement Patienregistartion_middle_txt;
@@ -800,7 +807,8 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[2]")
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='First Name is Required.']")
+	//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[2]
 	public WebElement Patienregistartion_first_val;
 
 	public String Register_firstname_val() {
@@ -992,7 +1000,9 @@ public class Webmoduleobjects extends Driver {
 	// Allergies
 	@FindBy(how = How.XPATH, using = "//*[@id='tabsPatientProfile']/ul/li[3]/a")
 	public WebElement Allergies_tab;
-	@FindBy(how = How.XPATH, using = "//*[@id='names']")
+	@FindBy(how = How.XPATH, using = "//div[@id='targetDiv']/div")
+	//*[@id=\"targetDiv\"]/descendant::div[@class='lblAllergyDrugNames']
+	//*[@id='names']  
 	public WebElement drugdropdown;
 	String drugname1 = "//*[@id='names']/option[";
 	String drugname2 = "]";
@@ -1007,10 +1017,12 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]")
+	@FindBy(how = How.XPATH, using = "//div[@id='formTabsNoProfile']/div/table[2]/tbody/tr")
+	//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]
 	public WebElement allergies_tab;
-	String reaction1 = "//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]/td[";
-	String reaction2 = "]";
+	String reaction1 = "//*[@id=\"formTabsNoProfile\"]/div/table[2]/tbody/tr[1]/td[";
+	//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]/td
+	String reaction2 = "]"; /// input remove
 
 	public String allergyreactions(int j) {
 		String reactions = driver.findElement(By.xpath(reaction1 + j + reaction2)).getText();
@@ -1018,7 +1030,8 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	String reactioncheckbox1 = "//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]/td[";
+	String reactioncheckbox1 = "//*[@id=\"formTabsNoProfile\"]/div/table[2]/tbody/tr/td[";
+	//*[@id='formTabsNoProfile']/table[1]/tbody/tr[4]/td/table[2]/tbody/tr[1]/td
 	String reactioncheckbox2 = "]/input";
 
 	public WebElement allergyreactioncheckbox(int j) {
@@ -1030,13 +1043,15 @@ public class Webmoduleobjects extends Driver {
 	// allergies_inactivelnk;
 	@FindBy(how = How.NAME, using = "otherAllergies")
 	public WebElement otherallergies_txt;
-	@FindBy(how = How.XPATH, using = "//*[@id='calendarDiv']/div[5]/table/tbody/tr[2]/td[2]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"calendarDiv\"]/div[5]/table/tbody/tr[4]/td[6]")
 	public WebElement allergies_calendertomarow;
-	@FindBy(how = How.XPATH, using = "//*[@id='formTabsNoProfile']/table[1]/tbody/tr[6]/td/a/img")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formTabsNoProfile\"]/div/div[6]/div/a/img")
+	//*[@id='formTabsNoProfile']/table[1]/tbody/tr[6]/td/a/img
 	public WebElement allergies_calender;
-	@FindBy(how = How.XPATH, using = "//*[@id='calendarDiv']/div[5]/table/tbody/tr[5]/td[6]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"calendarDiv\"]/div[5]/table/tbody/tr[2]/td[7]")
 	public WebElement allergies_todaydate;
-	@FindBy(how = How.XPATH, using = "html/body/div[2]/form/div[3]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td/div/table[2]/tbody/tr/td[2]/textarea")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"note\"]")
+	//html/body/div[2]/form/div[3]/div[3]/table/tbody/tr/td/table/tbody/tr[1]/td/div/table[2]/tbody/tr/td[2]/textarea
 	public WebElement allergies_note;
 	String inactive1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
 	String saveddrug2 = "]/td[2]";
@@ -1354,11 +1369,12 @@ public class Webmoduleobjects extends Driver {
 	 * "//*[@id='contentsMedicationHistoryTabs']/table") public WebElement
 	 * medicationhistory_table;
 	 */
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
+	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table/tbody") //tbody should be removed
 	public WebElement medicationhistory_table;
 	@FindBy(how = How.NAME, using = "updatedComments")
 	public WebElement updatedrug_comment_txt;
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table/tbody")
+	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/div")
+	//*[@id='scrollableTBodyFull']/table/tbody
 	public WebElement cancel_table;
 	@FindBy(how = How.LINK_TEXT, using = "Update Drug")
 	public WebElement updateDrug_btn;
@@ -1480,7 +1496,8 @@ public class Webmoduleobjects extends Driver {
 	public WebElement drugtofood_but;
 	@FindBy(how = How.LINK_TEXT, using = "Adverse Effects")
 	public WebElement adverseEffects_but;
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table[2]/tbody/tr[1]/td[2]/table/tbody/tr[4]/td[2]/div/div[2]/a")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/div/div/div[4]/div[1]/span/a")
+	//*[@id='scrollableTBodyFull']/table[2]/tbody/tr[1]/td[2]/table/tbody/tr[4]/td[2]/div/div[2]/a
 	public WebElement pharmacy_lnk;
 	/*
 	 * @FindBy(how = How.XPATH, using =
@@ -1514,7 +1531,8 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table/tbody/tr[1]/td[2]/table[1]/tbody/tr[2]/td[2]")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyFull\"]/div/div[1]/div[1]/div[1]/span[1]")
+	//*[@id='scrollableTBodyFull']/table/tbody/tr[1]/td[2]/table[1]/tbody/tr[2]/td[2]
 	public WebElement cancel_num;
 
 	public String confirmcancellation_num() {
@@ -1522,10 +1540,13 @@ public class Webmoduleobjects extends Driver {
 		return pharmacy;
 
 	}
-
+	
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"scrollableTBodyDrugSearchAltList\"]/table")
 	public WebElement pharmacy_table;
-	String pharmacy1 = "//*[@id='scrollableTBodyDrugSearchAltList']/table/tbody/tr[";
-	String pharmacy2 = "]/td[1]/a";
+	
+	String pharmacy1 = "//div[@id='scrollableTBodyDrugSearchAltList']/table/tbody/tr[";
+	String pharmacy2 = "]/td[1]/a"; //a needto be added 
 
 	public String pharmacy(int i) {
 		String pharmacy = driver.findElement(By.xpath(pharmacy1 + i + pharmacy2)).getText();
@@ -1625,9 +1646,10 @@ public class Webmoduleobjects extends Driver {
 	// "//*[@id='contentsPatientProfileTabs']/table/tbody/tr/td/table/tbody")public
 	// WebElement Saved_table;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
+	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table/tbody")
 	public WebElement Saved_table;
-	@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyFull']/table")
+	@FindBy(how = How.XPATH, using = "//div[@id='scrollableTBodyFull']/table/tbody")
+	//*[@id='scrollableTBodyFull']/table
 	//*[@id='contentsSearch']/table/tbody/tr[2]
 	public WebElement docsaved_table;
 
@@ -1652,8 +1674,10 @@ public class Webmoduleobjects extends Driver {
 
 	}
 
-	String cancelcheck1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[1]/td[2]/table[";
-	String cancelcheck2 = "]/tbody/tr[2]/td[1]/input";
+	String cancelcheck1 = "//*[@id=\"scrollableTBodyFull\"]/div/div[";
+	//*[@id='scrollableTBodyFull']/table/tbody/tr[1]/td[2]/table[
+	String cancelcheck2 = "]/div[1]/div[1]/input";
+	//]/tbody/tr[2]/td[1]/input
 
 	public WebElement cancelcheck1s(int i) {
 		return driver.findElement(By.xpath(cancelcheck1 + i + cancelcheck2));
@@ -1702,17 +1726,24 @@ public class Webmoduleobjects extends Driver {
 	////*[@id='formPatientProfileTabs']/table[2]/tbody/tr/td[2]/input
 	public WebElement favourite_search;
 	// medication history
-	String drug1 = "//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[";
-	String drug2 = "]/td[2]/a";
-	String docsav = "]/td[2]";
-
+	String drug1 = "//*[@id='scrollableTBodyFull']/table/tbody/tr[";
+	//*[@id=\"scrollableTBodyFull\"]/table/tbody/tr[
+	String drug2 = "]/td[2]"; //a need to be added at the end 
+	String drug3 = "]/td[2]/a";
+	String docsav = "]/td[2]/span[@id='dataLinks']/a"; //a need to remove at the end //
 	public WebElement medication_druglink(int i) {
-		return driver.findElement(By.xpath(drug1 + i + drug2));
+		return driver.findElement(By.xpath(drug1 + i + drug3));
 	}
 
 	public String medication_druglist(int i) {
 		String medication_druglist = driver.findElement(By.xpath(drug1 + i + drug2)).getText();
 		return medication_druglist;
+
+	}
+	
+	public String medication_druglist_PSP(int i) {
+		String medication_druglist1 = driver.findElement(By.xpath(drug1 + i + drug3)).getText();
+		return medication_druglist1;
 
 	}
 
@@ -1727,7 +1758,9 @@ public class Webmoduleobjects extends Driver {
 	}
 
 	public String save_druglist(int i) {
-		String medication_druglist = driver.findElement(By.xpath(drug1 + i + docsav)).getText();
+		//String medication_druglist = driver.findElement(By.xpath(drug1 + i + docsav)).getText();
+		//need to check above for doctor saved prescriptions
+		String medication_druglist = driver.findElement(By.xpath(drug1 + i + drug2)).getText();
 		return medication_druglist;
 
 	}
@@ -1772,6 +1805,103 @@ public class Webmoduleobjects extends Driver {
 	// doctor saved prescription
 	@FindBy(how = How.LINK_TEXT, using = "Saved Prescriptions")
 	public WebElement doctorsavedprescription_tab;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"targetDiv\"]/div/label[1]")
+	public WebElement drugdropdown1;
+	
+	//(//span[@id='command.errors']/child::node())[1]
+		//*[@id='formNoSearch']/table/tbody/tr[1]/td/li[1]
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Last Name should be alphabetic characters.']")
+	public WebElement Patienregistartion_lastname_val_Charecters;
+	
+	public String Patienregistartion_lastname_val_Charecters() {
+		String val = Patienregistartion_lastname_val_Charecters.getText();
+		return val;
+	}
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='First Name is Required.']")
+		public WebElement Patienregistartion_FirstName_val_Charecters;
+		
+		public String Patienregistartion_FirstName_val_Charecters() {
+			String val1 = Patienregistartion_FirstName_val_Charecters.getText();
+			return val1;	
+	}
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='City Required.']")
+		public WebElement Patienregistartion_City_val_Charecters;
+		
+		public String Patienregistartion_City_val_Charecters() {
+			String val1 = Patienregistartion_City_val_Charecters.getText();
+			return val1;	
+	}
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Zip Code Required.']")
+		public WebElement Patienregistartion_Zip_val_Charecters;
+		
+		public String Patienregistartion_Zip_val_Charecters() {
+			String val1 = Patienregistartion_Zip_val_Charecters.getText();
+			return val1;	
+	}
+		
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Invalid Date Of Birth.']")
+		public WebElement Patienregistartion_DOB_val_Charecters;
+		
+		public String Patienregistartion_DOB_val_Charecters() {
+			String val1 = Patienregistartion_DOB_val_Charecters.getText();
+			return val1;	
+	}
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Invalid Telephone No.(Home).']")
+		public WebElement Patienregistartion_TelePhoneW_val_Charecters;
+		
+		public String Patienregistartion_TelePhoneW_val_Charecters() {
+			String val1 = Patienregistartion_TelePhoneW_val_Charecters.getText();
+			return val1;	
+	}
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='invalid message address']")
+		public WebElement Patienregistartion_AddressNo_val_Charecters;
+		
+		public String Patienregistartion_AddressNo_val_Charecters() {
+			String val1 = Patienregistartion_AddressNo_val_Charecters.getText();
+			return val1;	
+	}
+		@FindBy(how = How.XPATH, using = "//div[@class='warnMessage']/span[text()='Invalid Telephone No.(Work).']")
+		public WebElement Patienregistartion_TelephoneWN_Charecters;
+		
+		public String Patienregistartion_TelephoneWN_val_Charecters() {
+			String val1 = Patienregistartion_TelephoneWN_Charecters.getText();
+			return val1;	
+		
+	}
+		@FindBy(how = How.NAME, using = "gender")
+		public WebElement Patient_gender;
+		/*public String Patient_Gender() {
+			String val1 = Patient_gender.getText();
+			return val1;*/	
+		
+	//}
+		
+		@FindBy(how = How.XPATH, using = "//*[@id=\"command.errors\"]")
+		public WebElement Patient_saveMessage;
+		public String Patient_SaveMess_Val() {
+			String val1 = Patient_saveMessage.getText();
+			return val1;	
+		
+	}
+		
+	
+		
+		
+		
+
+	
+	
+	
+		
+		
+		
+		
+		
+		
 
 }
 

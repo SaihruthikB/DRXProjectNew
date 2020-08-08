@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46491" started-at="2020-07-29T07:31:15Z" finished-at="2020-07-29T07:32:01Z">
+  <suite name="Default suite" duration-ms="142460" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:53:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46491" started-at="2020-07-29T07:31:15Z" finished-at="2020-07-29T07:32:01Z">
-      <class name="com.ys.h2hdrx.webmodule.UserLogin">
-        <test-method status="PASS" signature="beforetest()[pri:0, instance:com.ys.h2hdrx.webmodule.UserLogin@31a5c39e]" name="beforetest" is-config="true" duration-ms="16721" started-at="2020-07-29T07:31:15Z" finished-at="2020-07-29T07:31:32Z">
+    <test name="Default test" duration-ms="142460" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:53:02Z">
+      <class name="com.ys.h2hdrx.webmodule.Myprofile_favouritedrug">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="beforeTest" is-config="true" duration-ms="51637" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:51:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforetest -->
-        <test-method status="PASS" signature="doctorLogin(java.lang.String, java.lang.String)[pri:2, instance:com.ys.h2hdrx.webmodule.UserLogin@31a5c39e]" name="doctorLogin" duration-ms="29462" started-at="2020-07-29T07:31:32Z" data-provider="physicianlogin" finished-at="2020-07-29T07:32:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[MIDANAR001]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Pass@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="favouritedrug()[pri:1, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="favouritedrug" duration-ms="18222" started-at="2020-08-07T16:51:31Z" finished-at="2020-08-07T16:51:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doctorLogin -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ys.h2hdrx.webmodule.UserLogin@31a5c39e]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-07-29T07:32:01Z" finished-at="2020-07-29T07:32:01Z">
+        </test-method> <!-- favouritedrug -->
+        <test-method status="PASS" signature="addpracticelist()[pri:2, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="addpracticelist" duration-ms="11205" started-at="2020-08-07T16:51:49Z" finished-at="2020-08-07T16:52:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addpracticelist -->
+        <test-method status="PASS" signature="practicefavoritedrug()[pri:3, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="practicefavoritedrug" duration-ms="61349" started-at="2020-08-07T16:52:01Z" finished-at="2020-08-07T16:53:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- practicefavoritedrug -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-08-07T16:53:02Z" finished-at="2020-08-07T16:53:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.ys.h2hdrx.webmodule.UserLogin -->
+      </class> <!-- com.ys.h2hdrx.webmodule.Myprofile_favouritedrug -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

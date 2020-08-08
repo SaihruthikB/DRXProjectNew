@@ -175,18 +175,24 @@ public class Rxpad   {
 	  rx.Drugselection();*/
 		obj.previousprescription_but.click();
 		obj.confirm_but.click();
-     /* obj.edit_but.click();
+      obj.edit_but.click();
       obj.confirm_but.click();
 	  obj.adverseEffects_but.click();
 	  Thread.sleep(3000);
+	  obj.close_lnk.click();
+	  Thread.sleep(3000);
 	  obj.Patientedc_but.click();
 	  Thread.sleep(3000);
+	  obj.close_lnk.click();
+	  Thread.sleep(3000);
 	  obj.drugtofood_but.click();
+	  Thread.sleep(3000);
+	  obj.close_lnk.click();
 	  Thread.sleep(3000);
 	  obj.pharmacy_lnk.click();
 	  Thread.sleep(3000);
 	  obj.close_lnk.click();
-	  Thread.sleep(3000);*/
+	  Thread.sleep(3000);
 	}
 
 	@Test(priority = 5)
@@ -215,7 +221,7 @@ public class Rxpad   {
 	 @BeforeTest	
 	  public void beforeTest() throws Exception {
 	
-		driver = Driver.browser("web");
+		/*driver = Driver.browser("web");
 		 UserLogin us = new UserLogin();
 		 System.out.println("rxpad");
 	      // System.out.println("getDriver"+Driver.getDriver());
@@ -223,7 +229,7 @@ public class Rxpad   {
 	      us.doctorLogin("MIDANAR001", "Pass@123");
 	      PatientSearch ps = new PatientSearch();
 	      ps.driver = driver;
-	      ps.patientSearch();
+	      ps.patientSearch();*/
      
 	  }
 
