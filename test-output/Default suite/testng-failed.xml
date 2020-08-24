@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ys.h2hdrx.webmodule.Practicefavoritedrug">
+      <class name="com.ys.h2hdrx.webmodule.PendingRefills_Reports">
         <methods>
-          <include name="beforetest"/>
-          <include name="Confirmprescription"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="PendingRefills_Reports"/>
         </methods>
-      </class> <!-- com.ys.h2hdrx.webmodule.Practicefavoritedrug -->
+      </class> <!-- com.ys.h2hdrx.webmodule.PendingRefills_Reports -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

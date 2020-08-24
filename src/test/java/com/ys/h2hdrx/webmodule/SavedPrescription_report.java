@@ -22,7 +22,7 @@ public class SavedPrescription_report {
 	 
 	  if (obj.useridVal().contains("Last Name is required.")) {
   		
-  		obj.reset_LinkText.click();
+  		//obj.reset_LinkText.click();
   		try{
   		if(obj.report_savedocotor().equals("arban  amer.")){
   			System.out.println("doctor name is  there");
@@ -39,11 +39,11 @@ public class SavedPrescription_report {
   }}
   @BeforeTest
   public void beforeTest() throws Exception {
-	  /*driver = Driver.browser("web");
+	  driver = Driver.browser("web");
 		UserLogin us = new UserLogin();
 		// System.out.println("getDriver"+Driver.getDriver());
 		us.driver = driver;
-		us.doctorLogin("MIDANAR001", "Pass@123");*/
+		us.doctorLogin("MIDANAR001", "Pass@123");
   }
 
   @AfterTest

@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="142460" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:53:02Z">
+  <suite name="Default suite" duration-ms="95704" started-at="2020-08-17T17:07:16Z" finished-at="2020-08-17T17:08:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="142460" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:53:02Z">
-      <class name="com.ys.h2hdrx.webmodule.Myprofile_favouritedrug">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="beforeTest" is-config="true" duration-ms="51637" started-at="2020-08-07T16:50:39Z" finished-at="2020-08-07T16:51:31Z">
+    <test name="Default test" duration-ms="95704" started-at="2020-08-17T17:07:16Z" finished-at="2020-08-17T17:08:51Z">
+      <class name="com.ys.h2hdrx.webmodule.PrescriberHistory">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.ys.h2hdrx.webmodule.PrescriberHistory@4cf777e8]" name="beforeTest" is-config="true" duration-ms="65830" started-at="2020-08-17T17:07:16Z" finished-at="2020-08-17T17:08:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="favouritedrug()[pri:1, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="favouritedrug" duration-ms="18222" started-at="2020-08-07T16:51:31Z" finished-at="2020-08-07T16:51:49Z">
+        <test-method status="PASS" signature="Report_PrescriberHistory()[pri:7, instance:com.ys.h2hdrx.webmodule.PrescriberHistory@4cf777e8]" name="Report_PrescriberHistory" duration-ms="29835" started-at="2020-08-17T17:08:21Z" finished-at="2020-08-17T17:08:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- favouritedrug -->
-        <test-method status="PASS" signature="addpracticelist()[pri:2, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="addpracticelist" duration-ms="11205" started-at="2020-08-07T16:51:49Z" finished-at="2020-08-07T16:52:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addpracticelist -->
-        <test-method status="PASS" signature="practicefavoritedrug()[pri:3, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="practicefavoritedrug" duration-ms="61349" started-at="2020-08-07T16:52:01Z" finished-at="2020-08-07T16:53:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- practicefavoritedrug -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ys.h2hdrx.webmodule.Myprofile_favouritedrug@4cf777e8]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-08-07T16:53:02Z" finished-at="2020-08-07T16:53:02Z">
+        </test-method> <!-- Report_PrescriberHistory -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ys.h2hdrx.webmodule.PrescriberHistory@4cf777e8]" name="afterTest" is-config="true" duration-ms="9" started-at="2020-08-17T17:08:51Z" finished-at="2020-08-17T17:08:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.ys.h2hdrx.webmodule.Myprofile_favouritedrug -->
+      </class> <!-- com.ys.h2hdrx.webmodule.PrescriberHistory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

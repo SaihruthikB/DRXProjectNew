@@ -1212,10 +1212,13 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "//*[@id='formPatientProfileTabs']/table/tbody/tr[3]")
 	public WebElement defaultphysician_sucess;
 	// reports
-	@FindBy(how = How.LINK_TEXT, using = "Reports")
-	public WebElement reports_tab;
-	@FindBy(how = How.LINK_TEXT, using = "Saved Prescription") public WebElement reports_Savedprescriptintab;
-	@FindBy(how = How.LINK_TEXT, using = "Pending Refills") public WebElement reports_pendingrefilltab;
+	/////****************************************************/////
+	/*@FindBy(how = How.LINK_TEXT, using = "Reports")
+	public WebElement reports_tab;*/
+	/*@FindBy(how = How.LINK_TEXT, using = "Saved Prescription") 
+	public WebElement reports_Savedprescriptintab;
+	@FindBy(how = How.LINK_TEXT, using = "Pending Refills") 
+	public WebElement reports_pendingrefilltab;
 	@FindBy(how = How.LINK_TEXT, using = "Generate Report")
 	public WebElement generatereport_but;
 	@FindBy(how = How.LINK_TEXT, using = "<< Back")
@@ -1239,7 +1242,7 @@ public class Webmoduleobjects extends Driver {
 	public WebElement reports_search;
 	String patientxpath1 = "//*[@id=\"divPatientSearch\"]/table/tbody/tr[";
 	String patientxpath2 = "]/td[1]";
-	String patientaddressxpath2 = "]/td[2]";
+	String patientaddressxpath2 = "]/td[2]";	
 	String patientaddxpath2 = "]/td[4]/a";
 
 	public String patientlist(int i) {
@@ -1295,9 +1298,9 @@ public class Webmoduleobjects extends Driver {
 	@FindBy(how = How.XPATH, using = "html/body/div/div[5]/table/tbody")
 	public WebElement fromdate_tableday;
 
-	/*
+	
 	 * String month1="//*[@id='monthDiv_"; String month2="0']";
-	 */
+	 
 	String month1 = "/html/body/div/div[3]/div[";
 	String month2 = "]";
 
@@ -1340,7 +1343,10 @@ public class Webmoduleobjects extends Driver {
 
 	// to date
 	@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]/td/table/tbody/tr/td/table[1]/tbody/tr[7]/td[2]/table[2]/tbody/tr[3]/td[2]/a/img")
-	public WebElement report_todate;
+	public WebElement report_todate;*/
+	
+	/////*******************************************************
+	
 	/*
 	 * @FindBy(how = How.XPATH, using = "//*[@id='calendar_month_txt']") public
 	 * WebElement todate_month;
@@ -1574,13 +1580,13 @@ public class Webmoduleobjects extends Driver {
 	//*[@id='formPatientProfileTabs']/table/tbody/tr[1]
 	public WebElement drugsearchvali;
 
-	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[3]/div/button[1]/span")
+	@FindBy(how = How.XPATH, using = "/html/body/div[4]/div[3]/div/button[1]/span")
 	public WebElement schedule_ok;
 	@FindBy(how = How.ID, using = "loginUsername")
 	public WebElement schedule_email;
 	@FindBy(how = How.ID, using = "loginPassword")
 	public WebElement schedule_password;
-	@FindBy(how = How.ID, using = "signin_button")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"new_user\"]/div[2]/div[3]/input[1]")
 	public WebElement schedule_siginbutton;
 
 	public String drugsearch_vali() {
@@ -1803,8 +1809,11 @@ public class Webmoduleobjects extends Driver {
 	public WebElement selectall_checkbox;
 	// doctor saved prescription
 	// doctor saved prescription
+	//--------
 	@FindBy(how = How.LINK_TEXT, using = "Saved Prescriptions")
 	public WebElement doctorsavedprescription_tab;
+	
+	
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"targetDiv\"]/div/label[1]")
 	public WebElement drugdropdown1;
@@ -1888,6 +1897,219 @@ public class Webmoduleobjects extends Driver {
 		
 	}
 		
+		//sheduled drugs
+		
+		@FindBy(how = How.XPATH, using = "/html/body/div[4]/div[3]/div/button[1]/span")
+		public WebElement schedule_ok1;
+		@FindBy(how = How.ID, using = "user_email")
+		public WebElement idme_email;
+		@FindBy(how = How.ID, using = "user_password")
+		public WebElement idme_password;
+		@FindBy(how = How.NAME, using = "commit")
+		public WebElement schedule_siginbutton2;
+		@FindBy(how=How.XPATH,using="//*[@id='m_address_info_page']/div[3]/div[1]/button")public WebElement idme_homecontinue;
+		@FindBy(how=How.XPATH,using="//*[@id='review_info_page']/div[4]/div[1]/button")public WebElement idme_confirmcontinue;
+		@FindBy(how=How.XPATH,using="//*[@id='questions']/div[5]/button")public WebElement idme_identifycontinue;
+		@FindBy(how=How.XPATH,using="//*[@id='phone_info']/div[6]/div[1]/button")public WebElement idme_phonecontinue;
+		@FindBy(how=How.XPATH,using="//*[@id='personal-info']/div[4]/div")public WebElement idme_personLcontinue;
+		@FindBy(how=How.XPATH,using="//*[@id='new_multifactor']/div[3]/div/button") public WebElement idme_continue;
+
+		@FindBy(how = How.XPATH, using ="/html/body/div/div/div/div[2]/ul/li[1]/a/div[2]/div") public WebElement idme_startnow;
+		@FindBy(how = How.NAME, using = "birth_date")public WebElement idme_dob;
+
+		@FindBy(how = How.NAME, using = "social")public WebElement idme_social;
+		@FindBy(how = How.XPATH, using ="//*[@id='phone_info']/div[5]/div[1]/div[1]") public WebElement idme_smartphone;
+		@FindBy(how = How.XPATH, using ="//*[@id='review_info_page']/div[3]/div[1]/div/label/span")public WebElement idme_checkbox;
+
+		@FindBy(how = How.XPATH, using ="//*[@id='answers_question_0_1']")public WebElement idme_rockfinanicialcropcheckbox;
+		@FindBy(how = How.XPATH, using ="//*[@id='answers_question_1_1']")public WebElement idme_2009cropcheckbox;
+		@FindBy(how = How.XPATH, using ="//*[@id='answers_question_2_1']")public WebElement idme_sundersmanufacuringcheckbox;
+		@FindBy(how = How.XPATH, using ="/html/body/div/div/div/div[2]/div/div[3]/p/a")public WebElement idme_verifylink;
+		
+		//paths of ss med:
+		@FindBy(how = How.NAME, using = "consent")
+			public WebElement ssmedicationhistory_pbmwebtable1;
+		
+		
+		//xpats of patients:
+
+			@FindBy(how = How.XPATH, using = "//*[@id='scrollableTBodyThreeFourth']/table/tbody") public WebElement patientinfo_table;
+			String xpath1="//*[@id='scrollableTBodyThreeFourth']/table/tbody/tr[";
+			String xpath2= "]/td[1]";
+			public String patientid(int i){
+			String patientid = driver.findElement(By.xpath(xpath1+i+xpath2)).getText();
+			return patientid;
+
+			}
+
+			String pxpath1="//*[@id='scrollableTBodyThreeFourth']/table/tbody/tr[";
+			String pxpath2= "]/td[2]/a";
+			public String patietname(int i){
+			String patientname = driver.findElement(By.xpath(pxpath1+i+pxpath2)).getText();
+			return patientname;
+
+			}
+			public WebElement patientnames(int i){
+			WebElement patientinames = driver.findElement(By.xpath(pxpath1+i+pxpath2));
+			return patientinames;
+
+			}
+			
+			
+			// reports
+			
+			
+			@FindBy(how = How.LINK_TEXT, using = "Reports")
+			public WebElement reports_tab;
+			@FindBy(how = How.LINK_TEXT, using = "Saved Prescription") 
+			public WebElement reports_Savedprescriptintab;
+			@FindBy(how = How.LINK_TEXT, using = "Pending Refills") 
+			public WebElement reports_pendingrefilltab;
+			@FindBy(how = How.LINK_TEXT, using = "Generate Report")
+			public WebElement generatereport_but;
+			@FindBy(how = How.LINK_TEXT, using = "<< Back")
+			public WebElement reports_back;
+			@FindBy(how = How.XPATH, using = "//*[@id='plugin']")
+			public WebElement generatereport_error;
+
+			public String generatereport_error(int i) {
+			String list = generatereport_error.getText();
+			return list;
+			}
+
+			@FindBy(how = How.LINK_TEXT, using = "Patient Prescription")
+			public WebElement reports_prescription;
+			@FindBy(how = How.NAME, using = "patientFirstName")
+			public WebElement report_first_txt;
+
+			@FindBy(how = How.NAME, using = "patientLastName")
+			public WebElement report_lastname_txt;
+			// trunk5.2
+			//@FindBy(how = How.XPATH, using = "//*[@id='divPatientSearch']/table/tbody/tr/td/table")public WebElement reports_search;
+			@FindBy(how = How.XPATH, using = "//*[@id='divPatientSearch']")
+			public WebElement reports_search;
+			//trunk 5.2
+			/*String patientxpath1 = "//*[@id='divPatientSearch']/table/tbody/tr/td/table/tbody/tr[";
+			String patientxpath2 = "]/td[1]";*/
+			String patientxpath1 = "//*[@id='divPatientSearch']/table/tbody/tr[";
+			String patientxpath2 = "]/td[1]";
+			//trunk6.2 reports
+			/*String patientaddressxpath2 = "]/td[2]";
+			String patientaddxpath2 = "]/td[4]/a";
+			*/
+
+			String patientaddxpath2 = "]/td[2]";
+
+			public String patientlist(int i) {
+			String list = driver.findElement(By.xpath(patientxpath1 + i + patientxpath2)).getText();
+			return list;
+			}
+
+			public String patientaddresslist(int i) {
+			String list = driver.findElement(By.xpath(patientxpath1 + i + patientaddxpath2)).getText();
+			return list;
+			}
+
+			public WebElement patientaddlist(int i) {
+			return driver.findElement(By.xpath(patientxpath1 + i + patientaddxpath2));
+
+			}
+
+			// *[@id="divPatientSearch"]/table/tbody/tr/td/table/tbody/tr[
+
+			public WebElement patientlists(int i) {
+			return driver.findElement(By.xpath(patientxpath1 + i + patientxpath2));
+
+			}
+
+			@FindBy(how = How.LINK_TEXT, using = "Add")
+			public WebElement reports_add;
+			@FindBy(how = How.LINK_TEXT, using = "Remove")
+			public WebElement reports_remove;
+			//trunk 5.2
+			/*@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]/td/table/tbody/tr/td/table[1]/tbody/tr[2]/td")
+			public WebElement reports_breifcase;*/
+			@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/div/table[1]/tbody/tr[2]/td") public WebElement reports_breifcase;
+			public String reports_breifcase() {
+			String list = reports_breifcase.getText();
+			return list;
+			}
+			//trunk 5.2
+			/*@FindBy(how = How.XPATH, using = "//*[@id='patientOptions']/option")
+			public WebElement reports_options;
+			*/
+			@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/div/div[1]/div[2]/div[3]/div/div/label")public WebElement reports_options;
+			// rx pad prescription report
+			@FindBy(how = How.LINK_TEXT, using = "Prescription Report")
+			public WebElement rxpad_prescriptionreport;
+
+			// prescription report
+			@FindBy(how = How.LINK_TEXT, using = "Prescriber History")
+			public WebElement reports_prescriptionhistorytab;
+			// from date trunk 5.1
+			/*@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]/td/table/tbody/tr/td/table[1]/tbody/tr[7]/td[2]/table[2]/tbody/tr[2]/td[2]/a/img")
+			public WebElement report_fromdate;*/
+			// from date
+			@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/div[1]/div[1]/div[2]/div[4]/div/a/img")
+			public WebElement report_fromdate;
+
+
+			@FindBy(how = How.XPATH, using = "//*[@id='calendar_month_txt']")
+			public WebElement fromdate_month;
+			@FindBy(how = How.XPATH, using = "//*[@id='monthDropDown']")
+			public WebElement fromdate_tablemonth;
+			@FindBy(how = How.XPATH, using = "html/body/div/div[5]/table/tbody")
+			public WebElement fromdate_tableday;
+
+			/*
+			* String month1="//*[@id='monthDiv_"; String month2="0']";
+			*/
+			String month1 = "/html/body/div/div[3]/div[";
+			String month2 = "]";
+
+			// monthDropDown
+			public String calmonth(int i) {
+			String cal = driver.findElement(By.xpath(month1 + i + month2)).getText();
+			return cal;
+			}
+
+			public WebElement calmonths(int i) {
+			return driver.findElement(By.xpath(month1 + i + month2));
+
+			}
+
+			// year
+			@FindBy(how = How.ID, using = "calendar_year_txt")
+			public WebElement fromdate_year;
+			String year1 = "/html/body/div/div[4]/div[";
+			String year2 = "]";
+
+			// monthDropDown
+			public String calyear(int j) {
+			String cal = driver.findElement(By.xpath(year1 + j + year2)).getText();
+			return cal;
+			}
+
+			public WebElement calyears(int j) {
+			return driver.findElement(By.xpath(year1 + j + year2));
+
+			}
+
+			String date1 = "html/body/div/div[5]/table/tbody/tr[";
+			String date2 = "]/td[";
+
+			// String date3="]";
+			public String date(int k) {
+			String cal = driver.findElement(By.xpath(date1 + k + date2 + "]")).getText();
+			return cal;
+			}
+
+			// to date trunk 6.2
+			/*@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/table/tbody/tr[2]/td/table/tbody/tr/td/table[1]/tbody/tr[7]/td[2]/table[2]/tbody/tr[3]/td[2]/a/img")
+			public WebElement report_todate;*/
+			@FindBy(how = How.XPATH, using = "//*[@id='contentsSearch']/div[1]/div[1]/div[2]/div[5]/div/a/img")
+			public WebElement report_todate;
+			
 	
 		
 		

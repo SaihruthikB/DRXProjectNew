@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 
-public class SendandPrint   {
+public class SendandPrint {
 	Webmoduleobjects obj;
 
 	WebDriver driver;

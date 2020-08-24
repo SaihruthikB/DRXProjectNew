@@ -41,7 +41,7 @@ public class Rxpad   {
 	      ps.patientSearch();*/
 		obj = PageFactory.initElements(driver, Webmoduleobjects.class);
 		//remove comments after disable
-		tryFailScreenshot("WM_RX_03");
+	//	tryFailScreenshot("WM_RX_03");
 		obj.drugsearch_txt.click();
 		System.out.println(obj.useridVal());
 		if (obj.useridVal().contains("First three letters of Drug name are required.")) {

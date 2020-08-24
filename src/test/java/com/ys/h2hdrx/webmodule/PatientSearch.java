@@ -42,9 +42,9 @@ public class PatientSearch {
 		// remove comments  after disable user 
 		obj.Search_LinkText.click();
 		 if (obj.useridVal().contains("Last Name is invalid.")) {
-			tryPassScreenshot("WM_PS_04");
+			//tryPassScreenshot("WM_PS_04");
 		} else {
-			tryFailScreenshot("WM_PS_04");
+			//tryFailScreenshot("WM_PS_04");
 		}
 		obj.patientsearch_lastname_txt.clear();
 		obj.patientsearch_firstname_txt.sendKeys("98/*-+");

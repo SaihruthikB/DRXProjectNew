@@ -56,7 +56,7 @@ public class UserLogin {
 		obj.password_txt.sendKeys(password);
 		obj.userlogin_btn.click();
 		Thread.sleep(4000);
-		if (obj.useridVal().contains("User Id is required")) {
+		if (obj.useridVal().contains("User Id is required.")) {
 			tryPassScreenshot("WM_L_04");
 		} else {
 			tryFailScreenshot("WM_L_04");

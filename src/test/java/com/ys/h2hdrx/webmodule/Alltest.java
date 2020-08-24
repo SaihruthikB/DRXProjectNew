@@ -71,7 +71,7 @@ ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
 	  SSMedicationhistory ss = new SSMedicationhistory();
 	  ss.driver =driver;
 	 	 ss.pbm();
-	 	 ss.fills();
+	 	// ss.fills();
   }
   @Test(priority=5)
   public void allergies() throws Exception {
